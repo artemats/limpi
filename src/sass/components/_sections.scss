@@ -1,0 +1,14 @@
+.section{
+  position: relative;
+  padding: 15px 30px;
+  min-height: 100vh;
+    &:nth-child(1){
+      padding-top: 30px;
+    }
+    &-box{
+      min-height: calc(100vh - 30px);
+      height: 100%;
+      border-radius: 15px;
+      padding: 100px;
+    }
+}

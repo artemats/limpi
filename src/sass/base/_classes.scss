@@ -1,0 +1,50 @@
+.title-1{
+  @extend h1;
+}
+
+.title-2{
+  @extend h2;
+}
+
+.title-3{
+  @extend h3;
+}
+
+.title-4{
+  @extend h4;
+}
+
+.title-5{
+  @extend h5;
+}
+
+.title-6{
+  @extend h6;
+}
+
+.bg{
+    &-blue{
+      background-color: var(--color-blue);
+        &-100{
+          background-color: var(--color-blue-100);
+        }
+        &-200{
+          background-color: var(--color-blue-200);
+        }
+    }
+    &-purple{
+      background-color: var(--color-purple);
+        &-100{
+          background-color: var(--color-purple-100);
+        }
+    }
+    &-pink{
+      background-color: var(--color-pink);
+        &-100{
+          background-color: var(--color-pink-100);
+        }
+    }
+    &-green{
+      background-color: var(--color-green);
+    }
+}
