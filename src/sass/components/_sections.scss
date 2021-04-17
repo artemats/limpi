@@ -9,6 +9,18 @@
       min-height: calc(100vh - 30px);
       height: 100%;
       border-radius: 15px;
-      padding: 100px;
+      padding: 100px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &-title{
+
+    }
+    &-subtitle{
+      font-size: 26px;
+    }
+    &-action{
+      margin-top: 40px;
     }
 }

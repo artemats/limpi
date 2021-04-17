@@ -1,24 +1,24 @@
-.title-1{
+.h-1{
   @extend h1;
 }
 
-.title-2{
+.h-2{
   @extend h2;
 }
 
-.title-3{
+.h-3{
   @extend h3;
 }
 
-.title-4{
+.h-4{
   @extend h4;
 }
 
-.title-5{
+.h-5{
   @extend h5;
 }
 
-.title-6{
+.h-6{
   @extend h6;
 }
 
@@ -27,6 +27,7 @@
       background-color: var(--color-blue);
         &-100{
           background-color: var(--color-blue-100);
+          color: var(--color-white);
         }
         &-200{
           background-color: var(--color-blue-200);
