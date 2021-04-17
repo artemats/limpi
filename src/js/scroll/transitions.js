@@ -1,8 +1,9 @@
-import gsap, { Power1 } from 'gsap';
-import ScrollToPlugin from 'gsap/ScrollToPlugin';
+import gsap  from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import {goToSection} from "./goToSection";
+import {hideScaleSection} from "./hideScaleSection";
+import {showScaleSection} from "./showScaleSection";
 
-gsap.registerPlugin(ScrollToPlugin);
 gsap.registerPlugin(ScrollTrigger);
 
 export const initScrollTransitions = () => {
@@ -12,7 +13,10 @@ export const initScrollTransitions = () => {
             trigger: section,
             onEnter: () => {
                 goToSection(section);
-                console.log('enter down - ', section);
+                const prevSection = section.previousSibling.previousSibling;
+                if(!!prevSection) {
+                    hideScaleSection(prevSection);
+                }
             },
         });
 
@@ -21,24 +25,9 @@ export const initScrollTransitions = () => {
             start: 'bottom bottom',
             onEnterBack: () => {
                 goToSection(section);
-                console.log('enter up - ', section);
-            },
+                showScaleSection(section);
+            }
         });
     });
 
 };
-
-function goToSection(section, anim) {
-    gsap.to(window, {
-        duration: 1,
-        scrollTo: {
-            y: section,
-            // offsetY: 15
-        },
-        ease: Power1.easeOut
-    });
-
-    if(anim) {
-        anim.restart();
-    }
-}
