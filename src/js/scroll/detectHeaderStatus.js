@@ -2,16 +2,14 @@ export function detectHeaderStatus(direction) {
 
     const header = document.querySelector('.header');
 
-    if(direction === 'down') {
-
-        console.log('to down');
-
+    /// toggle header position ///
+    if(direction === 'down' && window.scrollY !== 0) {
+        header.classList.add('hidden');
     } else {
-
-        console.log('to up');
-
+        header.classList.remove('hidden');
     }
 
+    /// change header style ///
     window.addEventListener('scroll', () => {
        if(window.scrollY <= 0) {
             header.classList.remove('smart');

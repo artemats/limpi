@@ -47,6 +47,9 @@
             }
         }
     }
+    &.hidden{
+      top: -84px;
+    }
     .container{
       max-width: 100%;
     }
