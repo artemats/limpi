@@ -1,4 +1,4 @@
-export function detectHeaderStatus(direction) {
+export function detectHeaderStatus(direction, section) {
 
     const header = document.querySelector('.header');
 
@@ -6,6 +6,10 @@ export function detectHeaderStatus(direction) {
     if(direction === 'down' && window.scrollY !== 0) {
         header.classList.add('hidden');
     } else {
+        header.classList.remove('hidden');
+    }
+    /// for last section ///
+    if(section.getAttribute('id') === 'section-7') {
         header.classList.remove('hidden');
     }
 
