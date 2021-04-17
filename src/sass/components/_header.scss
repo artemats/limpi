@@ -1,0 +1,53 @@
+.header{
+  position: fixed;
+  top: 45px;
+  left: 45px;
+  right: 45px;
+  width: calc(100% - 90px);
+  z-index: 3;
+  color: var(--color-white);
+  border-radius: 13px;
+  padding: 25px 10px 19px;
+  transition: background-color .4s ease, top .4s ease, box-shadow .4s ease;
+    &-panel{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+        &-logo{
+            .logo{
+                &-letter,
+                &-star{
+                  fill: currentColor;
+                }
+            }
+        }
+        &-nav{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding-left: 68px;
+        }
+        &-action{
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+        }
+    }
+    &.smart{
+      top: 30px;
+      background-color: var(--color-white);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+      color: var(--color-black);
+        .logo{
+            &-letter{
+              fill: var(--color-black);
+            }
+            &-star{
+              fill: var(--color-blue-100);
+            }
+        }
+    }
+    .container{
+      max-width: 100%;
+    }
+}

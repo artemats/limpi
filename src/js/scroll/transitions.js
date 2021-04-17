@@ -3,6 +3,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import {goToSection} from "./goToSection";
 import {hideScaleSection} from "./hideScaleSection";
 import {showScaleSection} from "./showScaleSection";
+import {detectHeaderStatus} from "./detectHeaderStatus";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,6 +18,7 @@ export const initScrollTransitions = () => {
                 if(!!prevSection) {
                     hideScaleSection(prevSection);
                 }
+                detectHeaderStatus('down', section);
             },
         });
 
@@ -26,6 +28,7 @@ export const initScrollTransitions = () => {
             onEnterBack: () => {
                 goToSection(section);
                 showScaleSection(section);
+                detectHeaderStatus('up', section);
             }
         });
     });

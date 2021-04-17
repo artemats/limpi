@@ -9,76 +9,82 @@
   display: inline-block;
   transition: opacity .4s ease;
   color: inherit;
+    &-bold{
+      font-size: 20px;
+      font-family: var(--font-bold);
+      line-height: 1.6em;
+    }
     @include hover(991){
       &:hover{
         opacity: .7;
       }
     }
     &-btn{
-        display: inline-block;
-        height: 66px;
-        border-radius: 100px;
-        padding: 0 35px;
-        line-height: 66px;
-        border: none;
-        position: relative;
-        color: var(--color-white);
-        transition: color .4s cubic-bezier(0.1, 0, 0.3, 1);
-          &-title{
-            position: relative;
-            color: inherit;
-          }
-          &-bg{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            border-radius: 100px;
-            transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
-            background-color: var(--color-blue);
-              &:before,
-              &:after{
-                content: '';
-                position: absolute;
-                background-color: var(--color-white);
-              }
-              &:before{
-                width: 100%;
-                height: 0;
-                padding-bottom: 110%;
-                top: 50%;
-                left: 50%;
-                border-radius: 50%;
-                transform: translate3d(-50%,-50%,0) scale3d(0,0,1);
-              }
-              &:after{
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                opacity: 0;
-                transition: opacity 0.3s;
-              }
-          }
-          @include hover(991){
-            &:hover{
-              color: var(--color-blue);
-                .link-btn-bg{
-                  transform: scale3d(1.15,1.15,1);
-                    &:before{
-                      transition: transform .4s cubic-bezier(0.1, 0, 0.3, 1);
-                      transform: translate3d(-50%,-50%,0) scale3d(1,1,1);
-                    }
-                    &:after{
-                      opacity: 1;
-                      transition-duration: 0.01s;
-                      transition-delay: 0.3s;
-                    }
-                }
+      display: inline-block;
+      white-space: nowrap;
+      height: 66px;
+      border-radius: 100px;
+      padding: 0 35px;
+      line-height: 66px;
+      border: none;
+      position: relative;
+      color: var(--color-white);
+      transition: color .4s cubic-bezier(0.1, 0, 0.3, 1);
+        &-title{
+          position: relative;
+          color: inherit;
+        }
+        &-bg{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          border-radius: 100px;
+          transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+          background-color: var(--color-blue);
+            &:before,
+            &:after{
+              content: '';
+              position: absolute;
+              background-color: var(--color-white);
             }
+            &:before{
+              width: 100%;
+              height: 0;
+              padding-bottom: 110%;
+              top: 50%;
+              left: 50%;
+              border-radius: 50%;
+              transform: translate3d(-50%,-50%,0) scale3d(0,0,1);
+            }
+            &:after{
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              opacity: 0;
+              transition: opacity 0.3s;
+            }
+        }
+        @include hover(991){
+          &:hover{
+            color: var(--color-blue);
+              .link-btn-bg{
+                transform: scale3d(1.15,1.15,1);
+                  &:before{
+                    transition: transform .4s cubic-bezier(0.1, 0, 0.3, 1);
+                    transform: translate3d(-50%,-50%,0) scale3d(1,1,1);
+                  }
+                  &:after{
+                    opacity: 1;
+                    transition-duration: 0.01s;
+                    transition-delay: 0.3s;
+                  }
+              }
           }
+        }
       }
 }
 
