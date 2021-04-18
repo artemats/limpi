@@ -3,7 +3,7 @@
   padding: 30px 30px;
   min-height: 100vh;
   // space for next section //
-  margin-bottom: 30px;
+  //margin-bottom: 30px;
   //  &:nth-child(1){
   //    padding-top: 30px;
   //  }
@@ -24,6 +24,12 @@
         &-subcontent{
           padding-top: 90px;
           padding-bottom: 85px;
+        }
+        &-bg{
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 0;
         }
     }
     &-label{

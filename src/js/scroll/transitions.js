@@ -1,5 +1,6 @@
 import gsap  from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+
 import {goToSection} from "./goToSection";
 import {hideScaleSection} from "./hideScaleSection";
 import {showScaleSection} from "./showScaleSection";
@@ -33,5 +34,4 @@ export const initScrollTransitions = () => {
             }
         });
     });
-
 };
