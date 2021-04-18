@@ -9,13 +9,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const initScrollTransitions = () => {
 
+    /// transition default scroll ///
     document.querySelectorAll('.section').forEach(section => {
         ScrollTrigger.create({
             trigger: section,
             onEnter: () => {
                 goToSection(section);
                 const prevSection = section.previousSibling.previousSibling;
-                if(!!prevSection) {
+                if (!!prevSection) {
                     hideScaleSection(prevSection);
                 }
                 detectHeaderStatus('down', section);
