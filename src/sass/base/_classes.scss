@@ -49,3 +49,27 @@
       background-color: var(--color-green);
     }
 }
+
+.accent{
+  font-size: 34px;
+  font-family: var(--font-title);
+  line-height: 1.4em;
+  position: relative;
+    &-dots{
+      position: absolute;
+      left: 50%;
+      top: -70px;
+      transform: translate(-50%,0);
+      width: 35px;
+      height: 28px;
+        path{
+          fill: var(--color-purple);
+        }
+    }
+}
+
+.align{
+    &-center{
+      text-align: center;
+    }
+}

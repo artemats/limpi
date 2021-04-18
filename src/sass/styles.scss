@@ -13,15 +13,16 @@ Components
  */
 @import "components/app";
 @import "components/header";
-@import "components/sections";
 @import "components/footer";
 @import "components/buttons";
 @import "components/nav";
 @import "components/illustrations";
+@import "components/cards";
 
 /*
 Sections
  */
+@import "sections/sections";
 @import "sections/section-0";
 @import "sections/section-1";
 @import "sections/section-2";

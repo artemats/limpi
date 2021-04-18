@@ -1,0 +1,21 @@
+#section {
+  &-2 {
+    .section {
+      &-label,
+      &-title,
+      &-subtitle,
+      &-description-list{
+        max-width: 675px;
+      }
+      &-accent{
+        margin: 43px 72px 165px auto;
+      }
+    }
+    .illustration{
+      width: 548px;
+      height: 362px;
+      bottom: 0;
+      right: 67px;
+    }
+  }
+}

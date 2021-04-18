@@ -3,6 +3,10 @@ body{
   background-color: var(--color-white);
 }
 
+li{
+  position: relative;
+}
+
 #wrapper{
   position: relative;
   width: 100%;
