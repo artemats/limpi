@@ -1,0 +1,18 @@
+#section{
+  &-1{
+    .section{
+      &-label,
+      &-title,
+      &-subtitle{
+        max-width: 530px;
+      }
+    }
+    .content-column{
+      padding-bottom: 245px;
+      .illustration{
+        bottom: -88px;
+        left: 0;
+      }
+    }
+  }
+}
