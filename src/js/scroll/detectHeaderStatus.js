@@ -13,13 +13,20 @@ export function detectHeaderStatus(direction, section) {
         header.classList.remove('hidden');
     }
 
+    /// for first section ///
+    if(section.getAttribute('id') === 'section-0') {
+        header.classList.remove('smart');
+    } else {
+        header.classList.add('smart');
+    }
+
     /// change header style ///
-    window.addEventListener('scroll', () => {
-       if(window.scrollY <= 0) {
-            header.classList.remove('smart');
-       } else {
-           header.classList.add('smart');
-       }
-    });
+    // window.addEventListener('scroll', () => {
+    //    if(window.scrollY <= 0) {
+    //         header.classList.remove('smart');
+    //    } else {
+    //        header.classList.add('smart');
+    //    }
+    // });
 
 }

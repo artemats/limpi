@@ -21,12 +21,16 @@
     }
   }
   .content-column{
-    &:nth-child(1){
-      margin-right: 180px;
-    }
-    &:nth-child(2){
-      margin-left: 180px;
-    }
+    min-height: calc(100vh - 160px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+      &:nth-child(1){
+        margin-right: 180px;
+      }
+      &:nth-child(2){
+        margin-left: 180px;
+      }
   }
   .h-3{
     span{
@@ -37,8 +41,11 @@
   .illustration{
     width: 270px;
     height: 255px;
-    bottom: 0;
+    bottom: -52px;
     left: 50%;
     transform: translateX(-50%);
+  }
+  .link-btn{
+    margin-bottom: 40px;
   }
 }

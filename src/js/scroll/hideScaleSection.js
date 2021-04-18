@@ -8,7 +8,7 @@ export function hideScaleSection(section) {
         duration: 1,
         opacity: 0,
         scale: 0.9,
-        y: '90vh',
+        y: ( window.innerHeight / 1.3 ),
         ease: Power1.easeOut,
         onComplete: a => {
             sectionBox.style.opacity = 0;

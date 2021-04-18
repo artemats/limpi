@@ -14,8 +14,8 @@ export function goToSection(section, anim) {
         },
         ease: Power1.easeOut,
         onComplete: () => {
-            disableScroll.off();
             detectLogoColor(section);
+            disableScroll.off();
         }
     });
 
@@ -25,6 +25,8 @@ export function goToSection(section, anim) {
     if(anim) {
         anim.restart();
     }
+
+    return true;
 }
 
 function removeAllActiveClasses() {

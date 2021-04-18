@@ -16,11 +16,11 @@ export const initScrollTransitions = () => {
             trigger: section,
             onEnter: () => {
                 goToSection(section);
+                detectHeaderStatus('down', section);
                 const prevSection = section.previousSibling.previousSibling;
                 if (!!prevSection) {
                     hideScaleSection(prevSection);
                 }
-                detectHeaderStatus('down', section);
             },
         });
 
@@ -29,8 +29,8 @@ export const initScrollTransitions = () => {
             start: 'bottom bottom',
             onEnterBack: () => {
                 goToSection(section);
-                showScaleSection(section);
                 detectHeaderStatus('up', section);
+                showScaleSection(section);
             }
         });
     });
