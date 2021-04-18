@@ -15,6 +15,8 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      overflow: hidden;
+      position: relative;
         &-content{
           display: flex;
           align-items: center;
@@ -78,6 +80,15 @@
           max-width: 380px;
           margin: 0 auto;
         }
+    }
+    &-circle{
+      position: absolute;
+      width: 1507px;
+      height: 1507px;
+      background-color: var(--color-white);
+      opacity: .2;
+      border-radius: 50%;
+      pointer-events: none;
     }
 }
 

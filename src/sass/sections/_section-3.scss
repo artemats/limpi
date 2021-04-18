@@ -1,0 +1,22 @@
+#section {
+  &-3 {
+    .section {
+      &-label,
+      &-title,
+      &-subtitle,
+      &-description {
+        max-width: 500px;
+      }
+      &-circle{
+        top: 50%;
+        right: 0;
+        transform: translate(36%,-50%);
+      }
+    }
+    .content-column{
+      &:nth-child(1){
+        max-width: 46%;
+      }
+    }
+  }
+}
