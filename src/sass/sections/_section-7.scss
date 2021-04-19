@@ -1,0 +1,22 @@
+#section-7{
+  .section{
+    &-title{
+      max-width: 630px;
+    }
+    &-description{
+      max-width: 505px;
+    }
+  }
+  .h-2{
+    span{
+      background-color: var(--color-white);
+      color: var(--color-purple);
+    }
+  }
+  .illustration{
+    position: relative;
+    width: 783px;
+    height: 541px;
+    margin: 0 -45px 0 45px;
+  }
+}

@@ -21,7 +21,7 @@
     }
   }
   .content-column{
-    min-height: calc(100vh - 160px);
+    min-height: calc(100vh - 320px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,7 +41,7 @@
   .illustration{
     width: 270px;
     height: 255px;
-    bottom: -52px;
+    bottom: -132px;
     left: 50%;
     transform: translateX(-50%);
   }

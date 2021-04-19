@@ -1,0 +1,13 @@
+#section-5{
+  .section{
+    &-label,
+    &-title,
+    &-subtitle,
+    &-description{
+      max-width: 540px;
+    }
+    &-label{
+      font-size: 15px;
+    }
+  }
+}

@@ -8,6 +8,7 @@ Settings
 @import "base/classes";
 @import "base/typography";
 
+@import "../../node_modules/@splidejs/splide/dist/css/splide-core.min.css";
 /*
 Components
  */
@@ -20,6 +21,8 @@ Components
 @import "components/cards";
 @import "components/prices";
 @import "components/timer";
+@import "components/cleaners";
+@import "components/accordion";
 
 /*
 Sections
@@ -32,3 +35,4 @@ Sections
 @import "sections/section-4";
 @import "sections/section-5";
 @import "sections/section-6";
+@import "sections/section-7";
