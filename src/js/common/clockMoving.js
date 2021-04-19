@@ -1,15 +1,19 @@
 import gsap, { Power4 } from "gsap";
 
-document.querySelector('.timer-calculator-btn.__minus').addEventListener('click', () => {
-
-    clockMoving();
-
-});
-
-export function clockMoving() {
+export function clockMoving(direction) {
 
     const hourHand = document.querySelector('.clock-hour');
     const minuteHand = document.querySelector('.clock-minute');
+    const arrow = {
+        add: {
+            hour: 480,
+            minute: 720
+        },
+        sub: {
+            hour: -240,
+            minute: -720
+        }
+    };
 
     gsap.fromTo(hourHand,
         {
@@ -17,7 +21,17 @@ export function clockMoving() {
         },
         {
             duration: 1.5,
-            rotate: 480,
+            rotate: arrow[direction].hour,
+            ease: Power4.easeOut
+        });
+
+    gsap.fromTo(minuteHand,
+        {
+            rotate: 0
+        },
+        {
+            duration: 1.5,
+            rotate: arrow[direction].minute,
             ease: Power4.easeOut
         });
 
