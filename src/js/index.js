@@ -4,7 +4,7 @@ import './scroll/anchorScroll';
 import './common/timer';
 import { initCircleCarousel } from './common/initCircleCarousel';
 import './common/accordion';
-import './common/modal';
+import './common/detectButtonsClickEvent';
 import './common/inputMask';
 
 /*

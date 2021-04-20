@@ -41,7 +41,7 @@
     }
     &:valid,
     &:focus,
-    &:focus:invalid{
+    &:focus:valid{
       & ~ .input-label{
         text-transform: uppercase;
         font-size: 14px;
