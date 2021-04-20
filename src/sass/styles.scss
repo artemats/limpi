@@ -9,6 +9,7 @@ Settings
 @import "base/typography";
 
 @import "../../node_modules/@splidejs/splide/dist/css/splide-core.min.css";
+
 /*
 Components
  */
@@ -23,6 +24,10 @@ Components
 @import "components/timer";
 @import "components/cleaners";
 @import "components/accordion";
+@import "components/contacts";
+@import "components/social";
+@import "components/modal";
+@import "components/input";
 
 /*
 Sections

@@ -1,6 +1,35 @@
 .footer{
   background-color: var(--color-black-100);
-  min-height: 546px;
+  color: var(--color-white);
   border-radius: 15px;
   margin: 15px 30px 30px;
+    &-nav{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px rgba(255,255,255,.1) solid;
+      padding: 30px 0;
+        &-label{
+          display: inline-flex;
+          align-items: center;
+          opacity: .7;
+          font-size: 14px;
+            img{
+              max-height: 15px;
+            }
+        }
+        .link{
+          opacity: .7;
+        }
+    }
+    .section-box-content{
+      min-height: 546px;
+      align-items: flex-end;
+    }
+    .illustration{
+      width: 709px;
+      height: 496px;
+      margin-left: -123px;
+      position: relative;
+    }
 }

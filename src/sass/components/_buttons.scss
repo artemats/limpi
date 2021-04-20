@@ -14,13 +14,22 @@
       font-family: var(--font-bold);
       line-height: 1.6em;
     }
+    &-xl{
+      font-size: 28px;
+    }
+    &-sm{
+      font-size: 14px;
+    }
     @include hover(991){
       &:hover{
         opacity: .7;
       }
     }
     &-btn{
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
       white-space: nowrap;
       height: 66px;
       font-size: 18px;
@@ -68,6 +77,57 @@
               opacity: 0;
               transition: opacity 0.3s;
             }
+        }
+        &-icon{
+          width: 24px;
+          height: 24px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 10px;
+          position: relative;
+        }
+        &.__vb{
+          .link-btn-bg{
+            background-color: var(--color-viber);
+              &:before,
+              &:after{
+                background-color: var(--color-viber-100);
+              }
+          }
+          @include hover(991){
+            &:hover{
+              color: var(--color-white);
+            }
+          }
+        }
+        &.__tg{
+          .link-btn-bg{
+            background-color: var(--color-telegram);
+            &:before,
+            &:after{
+              background-color: var(--color-telegram-100);
+            }
+          }
+          @include hover(991){
+            &:hover{
+              color: var(--color-white);
+            }
+          }
+        }
+        &.__wa{
+          .link-btn-bg{
+            background-color: var(--color-whatsapp);
+            &:before,
+            &:after{
+              background-color: var(--color-whatsapp-100);
+            }
+          }
+          @include hover(991){
+            &:hover{
+              color: var(--color-white);
+            }
+          }
         }
         @include hover(991){
           &:hover{

@@ -1,6 +1,7 @@
 import gsap, { Power1 } from "gsap/gsap-core";
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
 import disableScroll from 'disable-scroll';
+
 import {detectLogoColor} from "./detectLogoColor";
 
 gsap.registerPlugin(ScrollToPlugin);
