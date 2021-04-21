@@ -3,5 +3,3 @@ document.querySelector('.link-btn').addEventListener('click', (event) => {
 
     console.log('click');
 });
-
-console.log($('.link-btn'));
