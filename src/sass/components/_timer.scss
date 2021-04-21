@@ -57,6 +57,20 @@
                 }
               }
             }
+            &:active{
+              .btn{
+                &-border{
+                  border-color: #0C4ADC;
+                }
+                &-bg{
+                  transform: scale(1.9);
+                }
+              }
+              &:before,
+              &:after{
+                background-color: #0C4ADC;
+              }
+            }
         }
         &-value{
           display: flex;

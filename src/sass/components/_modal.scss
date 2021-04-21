@@ -1,5 +1,6 @@
 .modal{
   display: none;
+  opacity: 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -40,6 +41,13 @@
               width: 100%;
               margin-top: 28px;
             }
+        }
+        &-close{
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
         }
     }
     &-close{
@@ -95,5 +103,18 @@
     }
     &-title{
       margin-bottom: 38px;
+    }
+    &-form{
+
+    }
+    &-success{
+      display: none;
+      opacity: 0;
+      transition: opacity .5s ease;
+        .illustration{
+          right: -21px;
+          bottom: -4px;
+          width: 440px;
+        }
     }
 }

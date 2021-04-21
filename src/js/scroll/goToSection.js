@@ -3,6 +3,7 @@ import ScrollToPlugin from 'gsap/ScrollToPlugin';
 import disableScroll from 'disable-scroll';
 
 import {detectLogoColor} from "./detectLogoColor";
+import {startAutoPlayCircleCarousel} from "../common/initCircleCarousel";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -17,6 +18,7 @@ export function goToSection(section, anim) {
         onComplete: () => {
             detectLogoColor(section);
             disableScroll.off();
+            section.getAttribute('id') === 'section-5' ? startAutoPlayCircleCarousel() : null;
         }
     });
 

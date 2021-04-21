@@ -43,6 +43,7 @@
         &-title{
           position: relative;
           color: inherit;
+          pointer-events: none;
         }
         &-bg{
           position: absolute;
@@ -87,6 +88,16 @@
           margin-right: 10px;
           position: relative;
         }
+        &-circle{
+          pointer-events: none;
+          width: 10px;
+          height: 10px;
+          opacity: .1;
+          position: absolute;
+          border-radius: 50%;
+          background-color: var(--color-blue);
+          z-index: 1;
+        }
         &.__vb{
           .link-btn-bg{
             background-color: var(--color-viber);
@@ -129,6 +140,13 @@
             }
           }
         }
+        &.__vb,
+        &.__tg,
+        &.__wa{
+          .link-btn-circle{
+            background-color: var(--color-white);
+          }
+        }
         @include hover(991){
           &:hover{
             color: var(--color-blue);
@@ -151,12 +169,17 @@
 
 .pink-to-white{
   color: var(--color-white);
-    .link-btn-bg{
-      background-color: var(--color-pink);
-        &:before,
-        &:after{
-          background-color: var(--color-white);
-        }
+    .link-btn{
+      &-bg {
+        background-color: var(--color-pink);
+          &:before,
+          &:after {
+            background-color: var(--color-white);
+          }
+      }
+      &-circle{
+        background-color: var(--color-blue);
+      }
     }
     @include hover(991){
       &:hover{
@@ -167,12 +190,17 @@
 
 .pink-to-pink{
   color: var(--color-white);
-    .link-btn-bg{
-      background-color: var(--color-pink);
-        &:before,
-        &:after{
-          background-color: var(--color-pink-100);
-        }
+    .link-btn{
+      &-bg{
+        background-color: var(--color-pink);
+          &:before,
+          &:after{
+            background-color: var(--color-pink-100);
+          }
+      }
+      &-circle{
+        background-color: var(--color-pink);
+      }
     }
     @include hover(991){
       &:hover{
@@ -182,12 +210,17 @@
 }
 
 .purple-to-white{
-  .link-btn-bg{
-    background-color: var(--color-purple);
-      &:before,
-      &:after{
-        background-color: var(--color-white);
-      }
+  .link-btn{
+    &-bg{
+      background-color: var(--color-purple);
+        &:before,
+        &:after{
+          background-color: var(--color-white);
+        }
+    }
+    &-circle{
+      background-color: var(--color-purple);
+    }
   }
   @include hover(991){
     &:hover{
@@ -220,4 +253,17 @@
       transition: transform .4s ease;
       pointer-events: none;
     }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
 }
