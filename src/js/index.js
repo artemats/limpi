@@ -12,7 +12,7 @@ import './common/modal';
 /*
 Init scroll transitions
  */
-// initScrollTransitions();
+initScrollTransitions();
 
 /*
 Init cleaners carousel

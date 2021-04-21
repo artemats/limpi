@@ -48,4 +48,13 @@
   .link-btn{
     margin-bottom: 40px;
   }
+  &.in-viewport{
+    .hobbies-item{
+      &.show{
+        opacity: 1;
+        filter: blur(0);
+        transition-delay: 0s;
+      }
+    }
+  }
 }
