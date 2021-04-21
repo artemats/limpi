@@ -1,7 +1,9 @@
 .cleaners {
-  max-width: 682px;
+  max-width: 882px;
+  width: 100vw;
   height: 571px;
   visibility: visible;
+  margin: -30px -73px 0 73px;
     &-box {
       max-width: 385px;
       width: 100%;
@@ -12,7 +14,10 @@
       padding: 80px 35px 110px;
       position: relative;
       height: 571px;
-      margin: 0 auto;
+      margin: 0 30px;
+      transform: translateX(0) scale(.8);
+      opacity: 0;
+      transition: transform .8s ease-out, opacity .4s ease-out;
       //margin: 0 176px 30px auto;
         &-photo {
           width: 159px;
@@ -52,6 +57,19 @@
             margin-left: 12px;
           }
         }
+        &.center{
+          z-index: 1;
+          opacity: 1;
+          transform: translateX(0) scale(1);
+        }
+        &.prev{
+          transform: translateX(-195px) scale(0.78);
+          opacity: .8;
+        }
+        &.next{
+          transform: translateX(195px) scale(0.78);
+          opacity: .8;
+        }
         @include m(992){
           position: absolute;
           top: 0;
@@ -63,6 +81,7 @@
           &__list{
             height: 100%;
             width: 100%;
+            overflow: visible;
           }
           &__list{
             display: flex;
