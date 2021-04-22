@@ -1,11 +1,16 @@
+import gsap from 'gsap';
 import Splide from "@splidejs/splide";
 
 const slides = document.querySelectorAll('.cleaners-box');
 const dots = document.querySelector('.cleaners-dots');
+const dotsCarousel = document.querySelector('.cleaners-dots-carousel');
+let dotsSplide;
 
 /// create dots ///
 initDots();
 const dotsArray = document.querySelectorAll('.cleaners-dots-item');
+/// create dots carousel ///
+initDotsCarousel();
 
 let total = slides.length - 1;
 let current = 0;
@@ -14,18 +19,51 @@ let next = 1;
 
 export function initCircleCarousel() {
     total > 0 ? moveSlides(current, prev, next) : initSingleSlide(current);
+    // total > 0 ? stopProgress(current) : initSingleSlide(current);
     // move slides on dots click //
     for(let i = 0; i < dotsArray.length; i++) {
         dotsArray[i].addEventListener('click', function () {
-            onStartMoving(parseInt(this.getAttribute('data-slide')));
+            current = parseInt(this.getAttribute('data-slide'));
+            onStartMoving(current);
+            // stopProgress(current);
+        });
+    }
+    // move slides on slide click //
+    for(let i = 0; i < slides.length; i++) {
+        slides[i].addEventListener('click', function () {
+            current = parseInt(this.getAttribute('data-slide'));
+            onStartMoving(current);
+            // stopProgress(current)
         });
     }
 }
 
-export function startAutoPlayCircleCarousel() {
+export function startProgress() {
+    let progress = document.querySelector('.cleaners-box.center circle');
+    gsap.fromTo(progress, {
+        strokeDashoffset: 527.788,
+        opacity: 1
+    },{
+        duration: 5,
+        strokeDashoffset: 0,
+        opacity: 1,
+        onComplete: () => {
+            current += 1;
+            stopProgress(current);
+        }
+    });
+}
 
-
-
+export function stopProgress(current) {
+    let progress = document.querySelector('.cleaners-box.center circle');
+    gsap.set(progress, {
+        duration: 0,
+        opacity: 0,
+        strokeDashoffset: 527.788,
+        onComplete: () => {
+            onStartMoving(current);
+        }
+    });
 }
 
 function onStartMoving(current) {
@@ -53,7 +91,6 @@ function onStartMoving(current) {
 }
 
 function moveSlides(current, prev, next) {
-
     for(let i = 0; i < slides.length; i++) {
         slides[i].classList.remove('center', 'prev', 'next');
         // dots //
@@ -68,13 +105,8 @@ function moveSlides(current, prev, next) {
     dotsArray[current].classList.add('active');
     dotsArray[prev].classList.add('prev');
     dotsArray[next].classList.add('next');
-
-
-    // document.querySelector('.cleaners-box.center .cleaners-box-loader circle').addEventListener('animationend', () => {
-    //     onStartMoving(current++);
-    //     console.log('end', current++);
-    // });
-
+    dotsSplide.go(current);
+    // startProgress();
 }
 
 function initSingleSlide(current) {
@@ -83,9 +115,21 @@ function initSingleSlide(current) {
 
 function initDots() {
     for(let i = 0; i < slides.length; i++) {
-        let dot = document.createElement('div');
-        dot.classList.add('cleaners-dots-item');
+        let dot = document.createElement('li');
+        dot.classList.add('cleaners-dots-item', 'splide__slide');
         dot.setAttribute('data-slide', i.toString());
-        dots.appendChild(dot);
+        dotsCarousel.querySelector('.splide__list').appendChild(dot);
     }
+}
+
+function initDotsCarousel() {
+    dotsSplide = new Splide( '#cleaners-dots-carousel', {
+        focus: 'center',
+        perPage: 3,
+        trimSpace: false,
+        arrows: false,
+        pagination: false,
+        autoWidth: true
+    } );
+    dotsSplide.mount();
 }

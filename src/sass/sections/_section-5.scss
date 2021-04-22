@@ -10,16 +10,16 @@
       font-size: 15px;
     }
   }
-  &.in-viewport{
-    .cleaners-box{
-      &.center{
-        .cleaners-box-loader{
-          circle{
-            animation-delay: .7s;
-            animation-play-state: running;
-          }
-        }
-      }
-    }
-  }
+  //&.in-viewport{
+  //  .cleaners-box{
+  //    &.center{
+  //      .cleaners-box-loader{
+  //        circle{
+  //          animation-delay: .7s;
+  //          animation-play-state: running;
+  //        }
+  //      }
+  //    }
+  //  }
+  //}
 }
