@@ -1,6 +1,6 @@
 .cleaners {
-  max-width: 882px;
-  width: 100vw;
+  max-width: 385px;
+  width: 100%;
   height: 571px;
   visibility: visible;
   margin: 20px -73px 0 73px;
@@ -18,7 +18,7 @@
       transform: translateX(0) scale(.8);
       opacity: 0;
       z-index: -1;
-      transition: transform .6s ease-out, opacity .6s ease-out;
+      transition: transform .6s ease-out, opacity .6s ease-out !important;
       pointer-events: none;
       //margin: 0 176px 30px auto;
         &-photo {
@@ -29,13 +29,13 @@
           margin: 0 auto 45px;
           position: relative;
           padding: 10px;
-          img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            object-position: center;
-          }
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+              object-fit: cover;
+              object-position: center;
+            }
         }
         &-title {
           margin-bottom: 15px;
@@ -74,21 +74,19 @@
               stroke: var(--color-blue);
               stroke-dasharray: 527.788, 527.788;
               stroke-dashoffset: 527.788;
-              //animation: progress 5s 1 ease-out;
-              //animation-fill-mode: both;
-              //animation-play-state: paused;
             }
         }
         &.center{
           z-index: 1;
           opacity: 1;
           transform: translateX(0) scale(1);
-            //.cleaners-box-loader{
-            //  circle{
-            //    animation-delay: .7s;
-            //    animation-play-state: running;
-            //  }
-            //}
+            .cleaners-box-loader{
+              circle{
+                animation: progress 5s 1 ease-out;
+                animation-fill-mode: both;
+                animation-play-state: paused;
+              }
+            }
         }
         &.prev{
           transform: translateX(-195px) scale(0.78);
@@ -98,15 +96,15 @@
         }
         &.prev,
         &.next{
-          opacity: .8;
+          opacity: .8 !important;
           z-index: 0;
           pointer-events: auto;
           cursor: pointer;
-            //.cleaners-box-loader{
-            //  circle{
-            //    animation: progressBack 1s 1 ease;
-            //  }
-            //}
+            .cleaners-box-loader{
+              circle{
+                animation: progressBack .2s 1 ease-out;
+              }
+          }
         }
         @include m(992){
           position: absolute;
@@ -114,10 +112,11 @@
         }
     }
     &-dots{
-      display: flex;
+      //display: flex;
       align-items: center;
       justify-content: center;
       margin: 60px -73px -45px 73px;
+      display: none;
         &-item{
           width: 10px;
           height: 10px;
@@ -170,6 +169,13 @@
           }
       }
     }
+    //&:hover{
+    //  .cleaners-box-loader{
+    //    circle{
+    //      animation-play-state: paused !important;
+    //    }
+    //  }
+    //}
 }
 
 .rating {
