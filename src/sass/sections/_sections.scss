@@ -1,12 +1,9 @@
 .section{
   position: relative;
-  padding: 30px 30px;
+  padding: 30px;
   min-height: 100vh;
   // space for next section //
-  margin-bottom: 30px;
-  //  &:nth-child(1){
-  //    padding-top: 30px;
-  //  }
+  margin-bottom: 5px;
     &-box{
       min-height: calc(100vh - 60px);
       height: 100%;
@@ -23,7 +20,7 @@
         }
         &-subcontent{
           padding-top: 90px;
-          padding-bottom: 85px;
+          padding-bottom: 5px;
         }
         &-bg{
           position: absolute;

@@ -20,9 +20,7 @@ export const initScrollTransitions = () => {
                 goToSection(section);
                 detectHeaderStatus('down', section);
                 const prevSection = section.previousSibling.previousSibling;
-                if (!!prevSection) {
-                    // hideScaleSection(prevSection);
-                }
+                !!prevSection ? hideScaleSection(prevSection) : null;
             },
         });
 
@@ -32,7 +30,7 @@ export const initScrollTransitions = () => {
             onEnterBack: () => {
                 goToSection(section);
                 detectHeaderStatus('up', section);
-                // showScaleSection(section);
+                showScaleSection(section);
             }
         });
     });

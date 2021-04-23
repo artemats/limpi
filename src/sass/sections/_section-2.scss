@@ -8,7 +8,12 @@
         max-width: 675px;
       }
       &-accent{
-        margin: 43px 72px 165px auto;
+        margin: -38px 72px 165px auto;
+      }
+    }
+    .content-column{
+      &:nth-child(1){
+        padding-bottom: 80px;
       }
     }
     .illustration{
