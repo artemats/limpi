@@ -15,7 +15,7 @@ export function initCircleCarousel() {
             speed: 0,
             arrows: false,
             pagination: true,
-            autoplay: true,
+            // autoplay: true,
             interval: 5000,
             resetProgress: true,
             pauseOnHover: false,
@@ -35,7 +35,7 @@ export function initCircleCarousel() {
         });
 
         // for init start //
-        circleCarousel.go(2);
+        circleCarousel.go(1);
 
         // slides click events //
         for(let i = 0; i < slides.length; i++) {

@@ -7,6 +7,7 @@ import {showScaleSection} from "./showScaleSection";
 import {detectHeaderStatus} from "./detectHeaderStatus";
 
 gsap.registerPlugin(ScrollTrigger);
+let enableTransition = true;
 
 export const initScrollTransitions = () => {
 
@@ -17,10 +18,12 @@ export const initScrollTransitions = () => {
         ScrollTrigger.create({
             trigger: section,
             onEnter: () => {
-                goToSection(section);
-                detectHeaderStatus('down', section);
+                if(enableTransition) {
+                    goToSection(section);
+                }
                 const prevSection = section.previousSibling.previousSibling;
                 !!prevSection ? hideScaleSection(prevSection) : null;
+                detectHeaderStatus('down', section);
             },
         });
 
@@ -28,10 +31,30 @@ export const initScrollTransitions = () => {
             trigger: section,
             start: 'bottom bottom',
             onEnterBack: () => {
-                goToSection(section);
-                detectHeaderStatus('up', section);
+                if(enableTransition) {
+                    goToSection(section);
+                }
                 showScaleSection(section);
+                detectHeaderStatus('up', section);
             }
         });
     });
 };
+
+/// disable transition on anchor click ///
+document.querySelectorAll('.anchor-scroll').forEach(link => {
+
+    link.addEventListener('click',  (event) => {
+        event.preventDefault();
+        const anchorSection = document.getElementById(link.getAttribute('data-anchor'));
+        const anchorSectionY = anchorSection.getBoundingClientRect().top + window.scrollY;
+
+        enableTransition = false;
+        window.scrollTo(0, anchorSectionY);
+        setTimeout(() => {
+            enableTransition = true;
+        }, 100);
+
+    });
+
+});
