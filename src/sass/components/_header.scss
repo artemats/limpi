@@ -7,7 +7,7 @@
   z-index: 3;
   color: var(--color-white);
   border-radius: 13px;
-  padding: 25px 10px 19px;
+  padding: 15px 10px 19px;
   transition: background-color .4s ease, top .4s ease, box-shadow .4s ease;
     &-panel{
       display: flex;
@@ -25,12 +25,15 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          padding-left: 68px;
+          padding-left: 150px;
         }
         &-action{
           display: flex;
           align-items: center;
           justify-content: flex-end;
+            .languages{
+              margin-right: 28px;
+            }
         }
     }
     &.smart{
@@ -46,9 +49,17 @@
               fill: var(--color-blue-100);
             }
         }
+        .languages{
+            &-current{
+              color: var(--color-blue);
+                &:before{
+                  background-color: var(--color-blue);
+                }
+            }
+        }
     }
     &.hidden{
-      top: -84px;
+      top: -94px;
       box-shadow: none;
     }
     .container{

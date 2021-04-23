@@ -5,39 +5,45 @@ const slides = document.querySelectorAll('.cleaners-box');
 let total = slides.length - 1;
 
 export function initCircleCarousel() {
-    const circleCarousel = new Splide('#cleaners', {
-        type: 'fade',
-        rewind: true,
-        speed: 0,
-        arrows: false,
-        pagination: false,
-        autoplay: true,
-        interval: 5000,
-        resetProgress: false,
-        pauseOnHover: false,
-        pauseOnFocus: false
-    }).mount();
 
-    // move event //
-    circleCarousel.on( 'move', function(current) {
-        let next = current < total ? current + 1 : 0;
-        let prev = current > 0 ? current - 1 : total;
-        for(let i = 0; i < slides.length; i++) {
-            slides[i].classList.remove('center', 'prev', 'next');
-        }
-        slides[current].classList.add('center');
-        slides[prev].classList.add('prev');
-        slides[next].classList.add('next');
-    });
+    let circleCarousel;
 
-    // for init start //
-    circleCarousel.go(2);
+    if(!document.querySelector('.cleaners').classList.contains('is-active')) {
+        circleCarousel = new Splide('#cleaners', {
+            type: 'fade',
+            rewind: true,
+            speed: 0,
+            arrows: false,
+            pagination: true,
+            autoplay: true,
+            interval: 5000,
+            resetProgress: true,
+            pauseOnHover: false,
+            pauseOnFocus: false
+        }).mount();
 
-    // slides click events //
-    for(let i = 0; i < slides.length; i++) {
-        slides[i].addEventListener('click', function () {
-            circleCarousel.go(parseInt(this.getAttribute('data-slide')));
+        // move event //
+        circleCarousel.on( 'move', function(current) {
+            let next = current < total ? current + 1 : 0;
+            let prev = current > 0 ? current - 1 : total;
+            for(let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove('center', 'prev', 'next');
+            }
+            slides[current].classList.add('center');
+            slides[prev].classList.add('prev');
+            slides[next].classList.add('next');
         });
+
+        // for init start //
+        circleCarousel.go(2);
+
+        // slides click events //
+        for(let i = 0; i < slides.length; i++) {
+            slides[i].addEventListener('click', function () {
+                circleCarousel.go(parseInt(this.getAttribute('data-slide')));
+            });
+        }
+
     }
 
 }

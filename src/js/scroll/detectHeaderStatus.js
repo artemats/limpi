@@ -9,9 +9,9 @@ export function detectHeaderStatus(direction, section) {
         header.classList.remove('hidden');
     }
     /// for last section ///
-    if(section.getAttribute('id') === 'section-7') {
-        header.classList.remove('hidden');
-    }
+    // if(section.getAttribute('id') === 'section-7') {
+    //     header.classList.remove('hidden');
+    // }
 
     /// for first section ///
     if(section.getAttribute('id') === 'section-0') {

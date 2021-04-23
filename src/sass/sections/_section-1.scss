@@ -1,18 +1,27 @@
-#section{
-  &-1{
-    .section{
-      &-label,
-      &-title,
-      &-subtitle{
-        max-width: 530px;
-      }
+#section-1{
+  .section{
+    &-label,
+    &-title,
+    &-subtitle{
+      max-width: 530px;
     }
-    .content-column{
-      padding-bottom: 245px;
-      .illustration{
-        bottom: -88px;
-        left: 0;
+  }
+  .content-column{
+      &:nth-child(1){
+        padding-bottom: 245px;
+          .illustration{
+            bottom: -88px;
+            left: 0;
+          }
       }
-    }
+      &:nth-child(2){
+        .illustration{
+          position: relative;
+          width: 800px;
+          height: 540px;
+          right: -40px;
+          bottom: -40px;
+        }
+      }
   }
 }

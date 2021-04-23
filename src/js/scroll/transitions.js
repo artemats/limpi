@@ -1,6 +1,5 @@
 import gsap  from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import disableScroll from 'disable-scroll';
 
 import {goToSection} from "./goToSection";
 import {hideScaleSection} from "./hideScaleSection";
@@ -11,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const initScrollTransitions = () => {
 
-    disableScroll.on();
+    window.scroll(0, 0);
 
     /// transition default scroll ///
     document.querySelectorAll('.section').forEach(section => {

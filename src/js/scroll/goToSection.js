@@ -3,7 +3,7 @@ import ScrollToPlugin from 'gsap/ScrollToPlugin';
 import disableScroll from 'disable-scroll';
 
 import {detectLogoColor} from "./detectLogoColor";
-// import {initCircleCarousel} from "../common/initCircleCarousel";
+import {initCircleCarousel} from "../common/initCircleCarousel";
 import {stopHobbiesSwitcher, switchHobbies} from "../common/switchHobbies";
 
 gsap.registerPlugin(ScrollToPlugin);
@@ -19,7 +19,7 @@ export function goToSection(section, anim) {
         onComplete: () => {
             detectLogoColor(section);
             disableScroll.off();
-            // section.getAttribute('id') === 'section-5' ? initCircleCarousel() : null;
+            section.getAttribute('id') === 'section-5' ? initCircleCarousel() : null;
             section.getAttribute('id') === 'section-4' ? switchHobbies() : stopHobbiesSwitcher();
         }
     });
