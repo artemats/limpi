@@ -7,6 +7,11 @@
       &-description {
         max-width: 500px;
       }
+      &-description{
+        @include d(1440){
+          max-width: 415px;
+        }
+      }
       &-circle{
         top: 50%;
         right: 0;
@@ -16,6 +21,9 @@
     .content-column{
       &:nth-child(1){
         max-width: 46%;
+          @include d(1440){
+            padding-bottom: 75px;
+          }
       }
     }
   }

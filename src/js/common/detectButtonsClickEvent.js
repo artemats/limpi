@@ -35,7 +35,7 @@ for(let i = 0; i < buttons.length; i++) {
         if(!!modal) {
             setTimeout(() => {
                 openModal(modal);
-            }, 200);
+            }, 100);
         }
         if(!!href !== !!blank) {
             setTimeout(() => {

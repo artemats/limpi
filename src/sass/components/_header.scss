@@ -26,6 +26,12 @@
           align-items: center;
           justify-content: center;
           padding-left: 150px;
+            @include d(1700){
+              padding-left: 70px;
+            }
+            @include d(1400){
+              padding-left: 30px;
+            }
         }
         &-action{
           display: flex;
@@ -33,6 +39,9 @@
           justify-content: flex-end;
             .languages{
               margin-right: 28px;
+                @include d(1440){
+                  margin-right: 18px;
+                }
             }
         }
     }
@@ -57,12 +66,34 @@
                 }
             }
         }
+        @include d(1440){
+          top: 35px;
+        }
     }
     &.hidden{
       top: -94px;
       box-shadow: none;
+        @include d(1800){
+          top: -90px;
+        }
+        @include d(1440){
+          top: -72px;
+        }
     }
     .container{
       max-width: 100%;
+        @include d(1800){
+          padding: 0 25px;
+        }
+    }
+    @include d(1800){
+      padding: 15px 0;
+    }
+    @include d(1440){
+      padding: 11px 0;
+      left: 35px;
+      right: 35px;
+      top: 32px;
+      width: calc(100% - 70px);
     }
 }

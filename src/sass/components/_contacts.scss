@@ -10,6 +10,9 @@
     &-value{
       line-height: 1em;
       margin-bottom: 40px;
+        @include d(1440){
+          margin-bottom: 30px;
+        }
     }
     .link-btn{
       max-width: 315px;
@@ -18,5 +21,8 @@
     }
     .small{
       margin-bottom: 15px;
+    }
+    @include d(1440){
+      margin-bottom: 55px;
     }
 }

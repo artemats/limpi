@@ -3,6 +3,9 @@
     .section{
       &-title{
         max-width: 585px;
+          @include d(1440){
+            max-width: 550px;
+          }
       }
       &-description{
         max-width: 425px;
@@ -25,6 +28,10 @@
       &:nth-child(2){
         max-width: 36%;
         padding-top: 180px;
+          @include d(1440){
+            max-width: 37%;
+            padding-top: 145px;
+          }
       }
     }
 }

@@ -84,21 +84,27 @@
           height: 242px;
           margin: 0 auto;
         }
+        @include d(1440){
+          margin: 40px auto 186px;
+        }
     }
     &-clock{
-        &-value{
-          width: 274px;
-          height: 274px;
-          border-radius: 50%;
-          margin: 90px auto 65px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          color: var(--color-white);
-          position: relative;
-        }
+      &-value{
+        width: 274px;
+        height: 274px;
+        border-radius: 50%;
+        margin: 90px auto 65px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: var(--color-white);
+        position: relative;
+          @include d(1440){
+            margin: 80px auto 65px;
+          }
+      }
     }
     &-title{
       font-family: var(--font-regular);

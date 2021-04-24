@@ -21,6 +21,9 @@
         &-subcontent{
           padding-top: 90px;
           padding-bottom: 5px;
+            @include d(1440){
+              padding-top: 70px;
+            }
         }
         &-bg{
           position: absolute;
@@ -28,18 +31,37 @@
           width: 100%;
           top: 0;
         }
+        @include d(1440){
+          min-height: calc(100vh - 40px);
+          padding: 110px 0;
+        }
     }
     &-label{
       font-family: var(--font-bold);
       line-height: 1.45em;
       text-transform: uppercase;
       margin-bottom: 20px;
+        @include d(1440){
+          font-size: 15px;
+        }
     }
     &-title{
       margin-bottom: 30px;
+        @include d(1440){
+          margin-bottom: 20px;
+        }
     }
     &-subtitle{
       font-size: 26px;
+        @include d(1600){
+          font-size: 24px;
+        }
+        @include d(1440){
+          font-size: 22px;
+        }
+        @include d(1400){
+          font-size: 20px;
+        }
     }
     &-description{
         &-list{
@@ -58,10 +80,19 @@
                   background-size: contain;
                   background-position: center;
                   background-image: url(../images/icons/star.svg);
+                    @include d(1440){
+                      top: 7px;
+                    }
                 }
                 &:not(:last-child){
                   margin-bottom: 36px;
+                    @include d(1440){
+                      margin-bottom: 32px;
+                    }
                 }
+            }
+            @include d(1440){
+              padding-top: 18px;
             }
         }
     }
@@ -83,6 +114,15 @@
           max-width: 380px;
           margin: 0 auto;
         }
+        @include d(1600){
+          width: 480px;
+          height: 480px;
+        }
+        @include d(1440){
+          width: 410px;
+          height: 410px;
+          padding: 37px 50px 67px;
+        }
     }
     &-circle{
       position: absolute;
@@ -92,6 +132,14 @@
       opacity: .2;
       border-radius: 50%;
       pointer-events: none;
+        @include d(1440){
+          width: 1069px;
+          height: 1069px;
+          transform: translate(35%, -54%);
+        }
+    }
+    @include d(1440){
+      padding: 20px;
     }
 }
 

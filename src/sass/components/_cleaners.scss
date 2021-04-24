@@ -35,9 +35,17 @@
               object-fit: cover;
               object-position: center;
             }
+            @include d(1440){
+              width: 144px;
+              height: 144px;
+              margin: 0 auto 32px;
+            }
         }
         &-title {
           margin-bottom: 15px;
+            @include d(1440){
+              margin-bottom: 10px;
+            }
         }
         &-description {
           font-size: 18px;
@@ -45,6 +53,9 @@
           -webkit-box-orient: vertical;
           -webkit-line-clamp: 3;
           overflow: hidden;
+            @include d(1440){
+              font-size: 14px;
+            }
         }
         &-rating {
           display: flex;
@@ -54,10 +65,13 @@
           left: 50%;
           transform: translateX(-50%);
           font-size: 16px;
-
-          .rating {
-            margin-left: 12px;
-          }
+            .rating {
+              margin-left: 12px;
+            }
+            @include d(1440){
+              font-size: 14px;
+              bottom: 58px;
+            }
         }
         &-loader{
           position: absolute;
@@ -115,6 +129,12 @@
         @include m(992){
           position: absolute;
           top: 0;
+        }
+        @include d(1440){
+          max-width: 278px;
+          height: 442px;
+          border-radius: 15px;
+          padding: 46px 35px 80px;
         }
     }
     &-dots{
@@ -175,6 +195,10 @@
           }
       }
     }
+    @include d(1440){
+      max-width: 278px;
+      height: 442px;
+    }
     .splide__pagination{
       margin: 50px auto 0;
       width: 100%;
@@ -208,6 +232,9 @@
         li{
           padding: 8px;
         }
+        @include d(1440){
+          margin: 16px auto 0;
+        }
     }
     //&:hover{
     //  .cleaners-box-loader{
@@ -223,12 +250,14 @@
   font-family: var(--font-bold);
   display: inline-flex;
   align-items: center;
-
-  &-star {
-    width: 17px;
-    height: 16px;
-    margin-right: 5px;
-  }
+    &-star {
+      width: 17px;
+      height: 16px;
+      margin-right: 5px;
+    }
+    @include d(1440){
+      font-size: 14px;
+    }
 }
 
 @keyframes progress {

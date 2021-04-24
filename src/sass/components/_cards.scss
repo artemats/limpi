@@ -2,6 +2,12 @@
   display: flex;
   flex-wrap: wrap;
   margin: 68px -30px 70px;
+    @include d(1600){
+      margin: 68px -15px 70px;
+    }
+    @include d(1440){
+      margin: 45px -15px 60px;
+    }
 }
 
 .card{
@@ -29,9 +35,21 @@
           overflow: hidden;
           max-width: 300px;
           padding-right: 25px;
+            @include d(1440){
+              max-width: 260px;
+              font-size: 26px;
+            }
         }
         &-illustration{
           position: absolute;
+            svg{
+              width: 100%;
+              height: 100%;
+            }
+        }
+        @include d(1440){
+          height: 212px;
+          padding: 35px;
         }
     }
     &:nth-child(1){
@@ -40,6 +58,12 @@
         height: 179px;
         top: 30px;
         right: -32px;
+          @include d(1440){
+            width: 120px;
+            height: 165px;
+            top: 23px;
+            right: -35px;
+          }
       }
     }
     &:nth-child(2){
@@ -48,6 +72,12 @@
         height: 235px;
         top: -28px;
         right: -13px;
+          @include d(1440){
+            width: 140px;
+            height: 208px;
+            top: -20px;
+            right: 1px;
+          }
       }
     }
     &:nth-child(3){
@@ -56,6 +86,18 @@
         height: 157px;
         top: 36px;
         right: -31px;
+          @include d(1440){
+            width: 135px;
+            height: 137px;
+            top: 39px;
+            right: -25px;
+          }
       }
+    }
+    @include d(1600){
+      padding: 0 15px;
+    }
+    @include d(1440){
+
     }
 }

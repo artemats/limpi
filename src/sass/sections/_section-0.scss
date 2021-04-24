@@ -5,14 +5,55 @@
       &-title,
       &-subtitle{
         max-width: 580px;
+          @include d(1600){
+            max-width: 530px;
+          }
+      }
+      &-subtitle{
+        @include d(1440){
+          max-width: 430px;
+        }
+        @include d(1400){
+          max-width: 380px;
+        }
+      }
+      &-box{
+        overflow: visible;
       }
     }
     .illustration{
       position: relative;
-      width: 897px;
-      height: 558px;
-      right: -194px;
+      max-width: 897px;
+      max-height: 558px;
+      right: -21.5%;
       top: -5px;
+      width: 47vw;
+      height: 29vw;
+        @include d(1900){
+          right: -16.5%;
+        }
+        @include d(1600){
+          right: -14.5%;
+        }
+        @include d(1440){
+          max-width: 765px;
+          max-height: 475px;
+          width: 53.8vw;
+          height: 33vw;
+          right: -17.5%;
+          top: 18px;
+        }
+        @include d(1400){
+          width: 50vw;
+          height: 31vw;
+        }
+    }
+    .content-column{
+      &:nth-child(1){
+        @include d(1440){
+          padding-top: 15px;
+        }
+      }
     }
   }
 }

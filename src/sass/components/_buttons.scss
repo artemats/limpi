@@ -9,10 +9,22 @@
   display: inline-block;
   transition: opacity .4s ease;
   color: inherit;
+    @include d(1400){
+      font-size: 15px;
+    }
     &-bold{
       font-size: 20px;
       font-family: var(--font-bold);
       line-height: 1.6em;
+        @include d(1600){
+          font-size: 18px;
+        }
+        @include d(1440){
+          font-size: 16px;
+        }
+        @include d(1400){
+          font-size: 15px;
+        }
     }
     &-xl{
       font-size: 28px;
@@ -163,6 +175,12 @@
                   }
               }
           }
+        }
+        @include d(1440){
+          height: 58px;
+          line-height: 58px;
+          padding: 0 30px;
+          font-size: 17px;
         }
       }
 }

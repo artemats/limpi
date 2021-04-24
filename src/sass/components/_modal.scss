@@ -41,6 +41,10 @@
               width: 100%;
               margin-top: 28px;
             }
+            @include d(1440){
+              max-width: 450px;
+              padding: 90px 60px 85px;
+            }
         }
         &-close{
           position: absolute;

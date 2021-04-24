@@ -15,8 +15,16 @@
   }
   .illustration{
     position: relative;
-    width: 783px;
-    height: 541px;
+    max-width: 783px;
+    width: 41vw;
+    max-height: 541px;
+    height: 29vw;
     margin: 0 -45px 0 45px;
+      @include d(1440){
+        max-width: 572px;
+        max-height: 400px;
+        width: 40vw;
+        height: 28vw;
+      }
   }
 }
