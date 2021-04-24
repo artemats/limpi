@@ -14,11 +14,6 @@
       padding: 75px 35px 110px;
       position: relative;
       height: 571px;
-      transform: translateX(0) scale(.8);
-      opacity: 0;
-      z-index: -1;
-      transition: transform .6s ease-out, opacity .6s ease-out !important;
-      pointer-events: none;
       //margin: 0 176px 30px auto;
         &-photo {
           width: 172px;
@@ -110,9 +105,15 @@
         }
         &.prev{
           transform: translateX(-195px) scale(0.78);
+            @include d(1300){
+              transform: translateX(-155px) scale(0.78);
+            }
         }
         &.next{
           transform: translateX(195px) scale(0.78);
+            @include d(1300){
+              transform: translateX(155px) scale(0.78);
+            }
         }
         &.prev,
         &.next{
@@ -120,21 +121,35 @@
           z-index: 0;
           pointer-events: auto;
           cursor: pointer;
+            @include d(1200){
+              transform: translate(0) scale(1);
+              opacity: 1 !important;
+            }
             //.cleaners-box-loader{
             //  circle{
             //    animation: progressBack .2s 1 ease-out;
             //  }
             //}
         }
-        @include m(992){
+        @include m(1201){
           position: absolute;
           top: 0;
+          transform: translateX(0) scale(.8);
+          opacity: 0;
+          z-index: -1;
+          pointer-events: none;
+          transition: transform .6s ease-out, opacity .6s ease-out !important;
         }
         @include d(1440){
           max-width: 278px;
           height: 442px;
           border-radius: 15px;
           padding: 46px 35px 80px;
+        }
+        @include d(1200){
+          &:not(:last-child){
+            margin-right: 20px;
+          }
         }
     }
     &-dots{
@@ -181,7 +196,7 @@
           width: 80px;
         }
     }
-    @include m(992){
+    @include m(1201){
       .splide{
           &__track,
           &__list{
@@ -198,6 +213,15 @@
     @include d(1440){
       max-width: 278px;
       height: 442px;
+    }
+    @include d(1200){
+      width: calc(100% + 120px);
+      max-width: none;
+      height: auto;
+      margin: 40px -60px 4px;
+        .splide__track{
+          padding-left: 60px;
+        }
     }
     .splide__pagination{
       margin: 50px auto 0;
@@ -234,6 +258,9 @@
         }
         @include d(1440){
           margin: 16px auto 0;
+        }
+        @include d(1200){
+          margin: 22px auto 0;
         }
     }
     //&:hover{

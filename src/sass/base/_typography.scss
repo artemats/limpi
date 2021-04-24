@@ -20,6 +20,9 @@ h2{
     @include d(1440){
       font-size: 50px;
     }
+    @include d(1200){
+      font-size: 42px;
+    }
 }
 
 h3{
@@ -28,6 +31,9 @@ h3{
   line-height: 1.3em;
     @include d(1440){
       font-size: 38px;
+    }
+    @include d(1200){
+      font-size: 42px;
     }
 }
 
@@ -55,5 +61,8 @@ p, li{
   font-family: inherit;
     @include d(1440){
       font-size: 20px;
+    }
+    @include d(1200){
+      font-size: 22px;
     }
 }

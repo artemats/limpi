@@ -33,6 +33,13 @@
         @include d(1400){
           font-size: 15px;
         }
+        @include d(1300){
+          font-size: 14px;
+        }
+        @include d(1200){
+          line-height: 58px;
+          font-size: 19px;
+        }
     }
     &-modal{
       position: absolute;
@@ -40,5 +47,9 @@
     @include d(1440){
       width: 50px;
       height: 50px;
+    }
+    @include d(1200){
+      width: 58px;
+      height: 58px;
     }
 }

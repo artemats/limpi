@@ -105,4 +105,8 @@
     @include d(1440){
       padding: 15px;
     }
+    @include d(1200){
+      padding: 0;
+      margin: 0 -10px 40px;
+    }
 }

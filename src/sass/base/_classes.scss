@@ -83,9 +83,17 @@
           width: 26px;
           height: 23px;
         }
+        @include d(1200){
+          top: -70px;
+          width: 36px;
+          height: 30px;
+        }
     }
     @include d(1440){
       font-size: 28px;
+    }
+    @include d(1200){
+      font-size: 34px;
     }
 }
 

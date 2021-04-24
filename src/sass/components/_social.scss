@@ -10,6 +10,9 @@
       position: relative;
         &:not(:last-child){
           margin-right: 20px;
+            @include d(1200){
+              margin-right: 30px;
+            }
         }
         &:before{
           content: '';

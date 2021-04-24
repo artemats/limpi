@@ -7,19 +7,39 @@ let total = slides.length - 1;
 export function initCircleCarousel() {
 
     let circleCarousel;
+    const desktopOptions = {
+        type: 'fade',
+        rewind: true,
+        speed: 0,
+        arrows: false,
+        pagination: true,
+        // autoplay: true,
+        interval: 5000,
+        resetProgress: true,
+        pauseOnHover: false,
+        pauseOnFocus: false,
+    };
+    const tabletOptions = {
+        type: 'loop',
+        rewind: true,
+        perPage: 1,
+        autoWidth: true,
+        // focus: 'center',
+        arrows: false,
+        speed: 600,
+        // trimSpace: false
+    };
+    let currentOptions = {};
+
+    if(window.innerWidth > 1200) {
+        currentOptions = desktopOptions;
+    } else {
+        currentOptions = tabletOptions;
+    }
 
     if(!document.querySelector('.cleaners').classList.contains('is-active')) {
         circleCarousel = new Splide('#cleaners', {
-            type: 'fade',
-            rewind: true,
-            speed: 0,
-            arrows: false,
-            pagination: true,
-            // autoplay: true,
-            interval: 5000,
-            resetProgress: true,
-            pauseOnHover: false,
-            pauseOnFocus: false
+            ...currentOptions
         }).mount();
 
         // move event //
@@ -34,14 +54,17 @@ export function initCircleCarousel() {
             slides[next].classList.add('next');
         });
 
-        // for init start //
-        circleCarousel.go(1);
+        if(window.innerWidth > 1200) {
 
-        // slides click events //
-        for(let i = 0; i < slides.length; i++) {
-            slides[i].addEventListener('click', function () {
-                circleCarousel.go(parseInt(this.getAttribute('data-slide')));
-            });
+            // for init start //
+            circleCarousel.go(1);
+
+            // slides click events //
+            for(let i = 0; i < slides.length; i++) {
+                slides[i].addEventListener('click', function () {
+                    circleCarousel.go(parseInt(this.getAttribute('data-slide')));
+                });
+            }
         }
 
     }

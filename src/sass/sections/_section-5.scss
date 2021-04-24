@@ -8,9 +8,17 @@
         @include d(1440){
           max-width: 480px;
         }
+        @include d(1300){
+          max-width: 470px;
+        }
     }
     &-label{
       font-size: 15px;
+    }
+    &-box{
+      @include d(1200){
+        overflow: visible;
+      }
     }
   }
   &.in-viewport{
@@ -21,6 +29,34 @@
             animation-play-state: running;
           }
         }
+      }
+    }
+  }
+  .container{
+    @include d(1200){
+      max-width: 100%;
+    }
+  }
+  .content-column{
+    &:nth-child(1){
+      @include d(1200){
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .section-action{
+        @include d(1200){
+          display: none;
+        }
+      }
+    }
+    &:nth-child(2){
+      .section-action{
+        @include m(1201){
+          display: none;
+        }
+      }
+      @include d(1200){
+        padding-bottom: 28px;
       }
     }
   }

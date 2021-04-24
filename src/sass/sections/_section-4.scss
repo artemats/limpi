@@ -17,11 +17,17 @@
             background-color: var(--color-blue-200);
             transform: translateY(-50%) rotate(45deg);
           }
+          @include d(1200){
+            display: none;
+          }
       }
       &-content{
         @include d(1800){
           align-items: flex-start;
         }
+      }
+      @include d(1200){
+        padding-bottom: 0;
       }
     }
   }
@@ -47,6 +53,33 @@
           @include d(1400){
             margin-right: 70px;
           }
+          @include d(1200){
+            display: flex;
+            flex-direction: column;
+            margin-right: 0;
+            min-height: 0;
+            padding-top: 0;
+              .h-3{
+                order: 2;
+                max-width: 538px;
+                margin: 0 auto;
+              }
+              .timer-calculator{
+                order: 3;
+              }
+          }
+          .illustration{
+            @include d(1200){
+              position: relative;
+              order: 1;
+              bottom: 0;
+              transform: translateX(0);
+              left: 0;
+              margin: -22px auto 70px;
+              width: 350px;
+              height: 330px;
+            }
+          }
       }
       &:nth-child(2){
         margin-left: 180px;
@@ -64,6 +97,46 @@
           }
           @include d(1400){
             margin-left: 70px;
+          }
+          @include d(1200){
+            margin-left: 0;
+            min-height: 0;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 90px;
+              &:before{
+                content: '';
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                width: calc(100vw - 20px);
+                top: 0;
+                bottom: 0;
+                border-radius: 15px 15px 0 0;
+                background-color: var(--color-blue-100);
+              }
+              &:after{
+                content: '';
+                position: absolute;
+                top: -42px;
+                width: 51px;
+                height: 51px;
+                left: 50%;
+                border-radius: 5px;
+                background-color: var(--color-blue-200);
+                transform: translateX(-50%) rotate(45deg);
+              }
+              .timer-clock{
+                order: 1;
+              }
+              .h-3{
+                position: relative;
+                order: 2;
+                margin-bottom: 40px;
+              }
+              .align-center{
+                order: 3;
+              }
           }
       }
       @include d(1440){

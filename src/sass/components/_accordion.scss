@@ -59,4 +59,7 @@
     @include d(1440){
       max-width: 630px;
     }
+    @include d(1200){
+      max-width: 100%;
+    }
 }

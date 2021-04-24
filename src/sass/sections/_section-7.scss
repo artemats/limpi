@@ -2,9 +2,21 @@
   .section{
     &-title{
       max-width: 630px;
+        @include d(1200){
+          margin: 0 auto 31px;
+        }
     }
     &-description{
       max-width: 505px;
+        @include d(1200){
+          margin: 0 auto;
+          max-width: 630px;
+        }
+    }
+    &-box{
+      @include d(1200){
+        padding-bottom: 0;
+      }
     }
   }
   .h-2{
@@ -26,5 +38,21 @@
         width: 40vw;
         height: 28vw;
       }
+      @include d(1200){
+        max-height: 422px;
+        margin: 155px auto -5px;
+        width: 75vw;
+        height: 52vw;
+      }
+  }
+  .content-column{
+    &:nth-child(1){
+      @include d(1200){
+        padding-top: 62px;
+      }
+    }
+  }
+  @include d(1200){
+    text-align: center;
   }
 }

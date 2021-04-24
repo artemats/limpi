@@ -32,6 +32,9 @@
             @include d(1400){
               padding-left: 30px;
             }
+            @include d(1200){
+              display: none;
+            }
         }
         &-action{
           display: flex;
@@ -42,6 +45,14 @@
                 @include d(1440){
                   margin-right: 18px;
                 }
+                @include d(1200){
+                  margin-right: 37px;
+                }
+            }
+            .link-bold{
+              @include d(1200){
+                display: none;
+              }
             }
         }
     }
@@ -69,6 +80,12 @@
         @include d(1440){
           top: 35px;
         }
+        @include d(1200){
+          top: 10px;
+          left: 20px;
+          right: 20px;
+          width: calc(100% - 40px);
+        }
     }
     &.hidden{
       top: -94px;
@@ -78,6 +95,9 @@
         }
         @include d(1440){
           top: -72px;
+        }
+        @include d(1200){
+          top: -80px;
         }
     }
     .container{
@@ -95,5 +115,8 @@
       right: 35px;
       top: 32px;
       width: calc(100% - 70px);
+    }
+    @include d(1200){
+      top: 24px;
     }
 }

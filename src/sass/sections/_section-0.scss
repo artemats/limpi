@@ -1,58 +1,86 @@
-#section{
-  &-0{
-    .section{
-      &-label,
-      &-title,
-      &-subtitle{
-        max-width: 580px;
-          @include d(1600){
-            max-width: 530px;
-          }
-      }
-      &-subtitle{
-        @include d(1440){
-          max-width: 430px;
-        }
-        @include d(1400){
-          max-width: 380px;
-        }
-      }
-      &-box{
-        overflow: visible;
-      }
+#section-0{
+    @include d(1200){
+      text-align: center;
     }
-    .illustration{
-      position: relative;
-      max-width: 897px;
-      max-height: 558px;
-      right: -21.5%;
-      top: -5px;
-      width: 47vw;
-      height: 29vw;
-        @include d(1900){
-          right: -16.5%;
-        }
+  .section{
+    &-label,
+    &-title,
+    &-subtitle{
+      max-width: 580px;
         @include d(1600){
-          right: -14.5%;
+          max-width: 530px;
         }
-        @include d(1440){
-          max-width: 765px;
-          max-height: 475px;
-          width: 53.8vw;
-          height: 33vw;
-          right: -17.5%;
-          top: 18px;
-        }
-        @include d(1400){
-          width: 50vw;
-          height: 31vw;
+        @include d(1200){
+          margin-right: auto;
+          margin-left: auto;
         }
     }
-    .content-column{
-      &:nth-child(1){
-        @include d(1440){
-          padding-top: 15px;
+    &-subtitle{
+      @include d(1440){
+        max-width: 430px;
+      }
+      @include d(1400){
+        max-width: 380px;
+      }
+      @include d(1200){
+        margin: 0 auto;
+        max-width: 480px;
+      }
+    }
+    &-box{
+      overflow: visible;
+        @include d(1200){
+          padding-bottom: 8px;
         }
+    }
+  }
+  .illustration{
+    position: relative;
+    max-width: 897px;
+    max-height: 558px;
+    right: -21.5%;
+    top: -5px;
+    width: 47vw;
+    height: 29vw;
+      @include d(1900){
+        right: -16.5%;
+      }
+      @include d(1600){
+        right: -14.5%;
+      }
+      @include d(1440){
+        max-width: 765px;
+        max-height: 475px;
+        width: 53.8vw;
+        height: 33vw;
+        right: -17.5%;
+        top: 18px;
+      }
+      @include d(1400){
+        width: 50vw;
+        height: 31vw;
+      }
+      @include d(1300){
+        width: 46vw;
+        height: 29vw;
+      }
+      @include d(1200){
+        right: -20px;
+        top: 0;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 70px;
+        width: 96vw;
+        height: 59.5vw;
+      }
+  }
+  .content-column{
+    &:nth-child(1){
+      @include d(1440){
+        padding-top: 15px;
+      }
+      @include d(1200){
+        padding-top: 72px;
       }
     }
   }

@@ -11,6 +11,11 @@
       justify-content: space-between;
       border-top: 1px rgba(255,255,255,.1) solid;
       padding: 30px 0;
+      max-width: 50%;
+      margin-left: auto;
+      margin-top: -83px;
+      position: relative;
+      z-index: 1;
         &-label{
           display: inline-flex;
           align-items: center;
@@ -20,9 +25,26 @@
               max-height: 15px;
               margin-left: 15px;
             }
+            @include d(1300){
+              font-size: 12px;
+            }
+            @include d(1200){
+              font-size: 14px;
+            }
         }
         .link{
           opacity: .7;
+        }
+        @include d(1440){
+          max-width: 58%;
+        }
+        @include d(1300){
+          margin-top: -80px;
+        }
+        @include d(1200){
+          margin-top: 30px;
+          max-width: 100%;
+          padding: 22px 0 30px;
         }
     }
     &.section{
@@ -30,6 +52,9 @@
       padding: 0 0 30px;
         @include d(1440){
           padding: 0 0 20px;
+        }
+        @include d(1200){
+          padding: 0 0 10px;
         }
     }
     .section-box{
@@ -59,9 +84,15 @@
         @include d(1440){
           max-width: 596px;
           max-height: 417px;
-          width: 40vw;
-          margin-left: -142px;
+          width: 42vw;
+          margin-left: -146px;
           height: 29vw;
+        }
+        @include d(1200){
+          margin-left: auto;
+          margin-right: auto;
+          width: 78vw;
+          height: 54vw;
         }
     }
     .content-column{
@@ -69,14 +100,29 @@
         @include d(1440){
           max-width: 42%;
         }
+        @include d(1200){
+          order: 2;
+          max-width: 100%;
+        }
       }
       &:nth-child(2){
-        @include d(1440){
-          max-width: 58%;
-        }
+        padding-bottom: 97px;
+          @include d(1440){
+            max-width: 58%;
+            padding-bottom: 83px;
+          }
+          @include d(1200){
+            order: 1;
+            max-width: 100%;
+            padding-top: 110px;
+            padding-bottom: 50px;
+          }
       }
     }
     @include d(1440){
       margin: 10px 20px 0;
+    }
+    @include d(1200){
+      margin: 10px 10px 0;
     }
 }

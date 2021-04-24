@@ -7,6 +7,9 @@
         @include d(1440){
           max-width: 440px;
         }
+        @include d(1200){
+          max-width: 500px;
+        }
     }
   }
   .content-column{
@@ -20,9 +23,19 @@
                 height: 214px;
                 bottom: -73px;
               }
+              @include d(1300){
+                width: 170px;
+                height: 194px;
+              }
+              @include d(1200){
+                display: none;
+              }
           }
           @include d(1440){
             padding-bottom: 230px;
+          }
+          @include d(1200){
+            padding-bottom: 0;
           }
       }
       &:nth-child(2){
@@ -39,6 +52,16 @@
               max-height: 478px;
               width: 45.6vw;
               right: 0;
+            }
+            @include d(1300){
+              width: 41vw;
+            }
+            @include d(1200){
+              width: 100%;
+              max-width: 800px;
+              max-height: none;
+              height: auto;
+              margin: -26px auto 0;
             }
         }
       }

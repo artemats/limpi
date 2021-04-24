@@ -8,6 +8,10 @@
     @include d(1440){
       margin: 45px -15px 60px;
     }
+    @include d(1200){
+      flex-direction: column;
+      margin: 45px 0 40px;
+    }
 }
 
 .card{
@@ -39,6 +43,14 @@
               max-width: 260px;
               font-size: 26px;
             }
+            @include d(1300){
+              font-size: 22px;
+              max-width: 225px;
+            }
+            @include d(1200){
+              font-size: 30px;
+              max-width: 295px;
+            }
         }
         &-illustration{
           position: absolute;
@@ -50,6 +62,10 @@
         @include d(1440){
           height: 212px;
           padding: 35px;
+        }
+        @include d(1200){
+          padding: 40px 40px 52px;
+          height: auto;
         }
     }
     &:nth-child(1){
@@ -63,6 +79,9 @@
             height: 165px;
             top: 23px;
             right: -35px;
+          }
+          @include d(1200){
+            right: -21px;
           }
       }
     }
@@ -78,6 +97,10 @@
             top: -20px;
             right: 1px;
           }
+          @include d(1200){
+            top: -24px;
+            right: -16px;
+          }
       }
     }
     &:nth-child(3){
@@ -92,12 +115,25 @@
             top: 39px;
             right: -25px;
           }
+          @include d(1200){
+            top: 62px;
+            right: -31px;
+          }
       }
     }
     @include d(1600){
       padding: 0 15px;
     }
-    @include d(1440){
-
+    @include d(1200){
+      width: 100%;
+      max-width: 600px;
+      margin-right: auto;
+      margin-left: auto;
+        &:not(:last-child){
+          margin-bottom: 20px;
+        }
+    }
+    @include d(991){
+      max-width: 508px;
     }
 }
