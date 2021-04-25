@@ -8,6 +8,7 @@ import {stopHobbiesSwitcher, switchHobbies} from "../common/switchHobbies";
 import {initPricesCarousel} from "../common/initPricesCarousel";
 import {initHeroAnimation} from "../lottie/initHeroAnimation";
 import {initHowItWorksAnimation} from "../lottie/initHowItWorksAnimation";
+import {initCtaAnimation} from "../lottie/initCtaAnimation";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -46,6 +47,7 @@ function toDoWithOnSection(section) {
     section.getAttribute('id') === 'section-3' ? initPricesCarousel() : null;
     section.getAttribute('id') === 'section-4' ? switchHobbies() : stopHobbiesSwitcher();
     section.getAttribute('id') === 'section-5' ? initCircleCarousel() : null;
+    section.getAttribute('id') === 'section-7' ? initCtaAnimation() : null;
 }
 
 function removeAllActiveClasses() {

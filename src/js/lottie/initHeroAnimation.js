@@ -12,7 +12,6 @@ export const initHeroAnimation = () => {
             autoplay: true,
             path: 'lottie/Illustration-main.json',
             rendererSettings: {
-                // scaleMode: 'noScale',
                 progressiveLoad: true,
                 hideOnTransparent: true
             }
