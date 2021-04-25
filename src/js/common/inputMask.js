@@ -12,7 +12,7 @@ phone.addEventListener('input', function (e) {
 });
 
 name.addEventListener('input', function (e) {
-    if(!/^[a-zA-Z]*$/g.test(e.target.value)) {
+    if(/^\d+$/g.test(e.target.value)) {
         name.classList.add('error');
     } else {
         name.classList.remove('error');

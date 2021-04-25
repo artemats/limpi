@@ -64,3 +64,39 @@ li{
     display: inline;
   }
 }
+
+.cta-quote{
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url(../images/quote.svg);
+  color: var(--color-white);
+  font-size: 27px;
+  top: -2px;
+  right: 22%;
+  padding: 45px;
+    &-label{
+      transform-origin: center;
+      transform: rotate(-4.04deg);
+      text-align: center;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+    }
+    @include d(1700){
+      top: -30px;
+      right: 10%;
+    }
+    @include d(1440){
+      font-size: 21px;
+      padding: 30px;
+      right: 18%;
+    }
+    @include d(600){
+      font-size: 15px;
+      padding: 20px;
+      right: 12%;
+    }
+}
