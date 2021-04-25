@@ -9,6 +9,7 @@ import {initPricesCarousel} from "../common/initPricesCarousel";
 import {initHeroAnimation} from "../lottie/initHeroAnimation";
 import {initHowItWorksAnimation} from "../lottie/initHowItWorksAnimation";
 import {initCtaAnimation} from "../lottie/initCtaAnimation";
+import {initFooterStars} from "../lottie/initFooterStars";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -48,6 +49,7 @@ function toDoWithOnSection(section) {
     section.getAttribute('id') === 'section-4' ? switchHobbies() : stopHobbiesSwitcher();
     section.getAttribute('id') === 'section-5' ? initCircleCarousel() : null;
     section.getAttribute('id') === 'section-7' ? initCtaAnimation() : null;
+    section.getAttribute('id') === 'section-8' ? initFooterStars() : null;
 }
 
 function removeAllActiveClasses() {

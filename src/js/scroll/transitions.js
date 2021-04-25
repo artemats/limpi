@@ -6,6 +6,9 @@ import {hideScaleSection} from "./hideScaleSection";
 import {showScaleSection} from "./showScaleSection";
 import {detectHeaderStatus} from "./detectHeaderStatus";
 import {closeMenu} from "../common/toggleMobileMenu";
+import {initHowItWorksAnimation} from "../lottie/initHowItWorksAnimation";
+import {initCtaAnimation} from "../lottie/initCtaAnimation";
+import {initFooterStars} from "../lottie/initFooterStars";
 
 gsap.registerPlugin(ScrollTrigger);
 let enableTransition = true;
@@ -23,7 +26,7 @@ export const initScrollTransitions = () => {
                     goToSection(section);
                 }
                 const prevSection = section.previousSibling.previousSibling;
-                // !!prevSection ? hideScaleSection(prevSection) : null;
+                !!prevSection ? hideScaleSection(prevSection) : null;
                 detectHeaderStatus('down', section);
             },
         });
@@ -35,7 +38,7 @@ export const initScrollTransitions = () => {
                 if(enableTransition) {
                     goToSection(section);
                 }
-                // showScaleSection(section);
+                showScaleSection(section);
                 detectHeaderStatus('up', section);
             }
         });
@@ -56,7 +59,13 @@ document.querySelectorAll('.anchor-scroll').forEach(link => {
             enableTransition = true;
         }, 100);
 
-        window.innerWidth <= 1200 ? closeMenu() : null;
+        if(window.innerWidth <= 1200) {
+            closeMenu();
+        } else {
+            anchorSection.getAttribute('id') === 'section-2' ? initHowItWorksAnimation() : null;
+            anchorSection.getAttribute('id') === 'section-7' ? initCtaAnimation() : null;
+            anchorSection.getAttribute('id') === 'section-8' ? initFooterStars() : null;
+        }
 
     });
 
