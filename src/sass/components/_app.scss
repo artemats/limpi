@@ -53,3 +53,14 @@ li{
       height: 28px;
     }
 }
+
+.split{
+  &-row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &-word{
+    margin-right: 5px;
+    display: inline;
+  }
+}

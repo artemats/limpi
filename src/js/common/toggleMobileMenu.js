@@ -1,4 +1,4 @@
-import gsap from 'gsap';
+import gsap, { Bounce } from 'gsap';
 
 const burger = document.querySelector('.burger');
 const header = document.querySelector('.header');
@@ -31,10 +31,11 @@ export function openMenu() {
                        opacity: 0,
                        y: 30
                    },{
-                       duration: 0.5,
+                       duration: 1,
                        opacity: 1,
                        y: 0,
-                       stagger: 0.1
+                       stagger: 0.1,
+                       ease: Bounce.easeOut
                    });
                }
            });

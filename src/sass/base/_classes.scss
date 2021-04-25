@@ -23,7 +23,7 @@
 }
 
 .h-1, .h-2, .h-3, .h-4, .h-5, .h-6{
-  span{
+  span:not(.split-word){
     display: inline-block;
     border-radius: 8px;
     padding: 0 12px;
