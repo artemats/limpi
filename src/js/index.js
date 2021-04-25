@@ -6,14 +6,8 @@ import './common/detectButtonsClickEvent';
 import './common/inputMask';
 import './common/formSubmit';
 import './common/modal';
-import {initCircleCarousel} from "./common/initCircleCarousel";
-import {initPricesCarousel} from "./common/initPricesCarousel";
 
 /*
 Init scroll transitions
  */
 initScrollTransitions();
-
-initCircleCarousel();
-
-initPricesCarousel();

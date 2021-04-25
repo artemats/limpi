@@ -9,6 +9,9 @@
           @include d(1200){
             max-width: 450px;
           }
+          @include d(600){
+            max-width: 65%;
+          }
       }
       &-description{
         max-width: 425px;
@@ -19,8 +22,13 @@
             max-width: 100%;
           }
       }
-      &-box-content{
-        align-items: flex-start;
+      &-box{
+        &-content{
+          align-items: flex-start;
+        }
+        @include d(600){
+          overflow: visible;
+        }
       }
     }
     .accordion{
@@ -50,9 +58,22 @@
           width: 255px;
           height: 240px;
         }
+        @include d(600){
+          width: 135px;
+          height: 127px;
+          position: absolute;
+          top: 26px;
+          right: -30px;
+        }
     }
     .content-column{
       &:nth-child(1){
+        .illustration{
+          display: none;
+            @include d(600){
+              display: block;
+            }
+        }
         @include d(1200){
           padding-top: 21px;
         }

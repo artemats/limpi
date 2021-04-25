@@ -213,12 +213,6 @@
     @include d(1200){
       padding: 10px 10px 0;
       min-height: 0;
-      // test //
-      margin-bottom: 20px;
-    }
-    @include d(600){
-      // test //
-      margin-bottom: 60px;
     }
 }
 

@@ -22,7 +22,7 @@ export const initScrollTransitions = () => {
                     goToSection(section);
                 }
                 const prevSection = section.previousSibling.previousSibling;
-                !!prevSection ? hideScaleSection(prevSection) : null;
+                // !!prevSection ? hideScaleSection(prevSection) : null;
                 detectHeaderStatus('down', section);
             },
         });
@@ -34,7 +34,7 @@ export const initScrollTransitions = () => {
                 if(enableTransition) {
                     goToSection(section);
                 }
-                showScaleSection(section);
+                // showScaleSection(section);
                 detectHeaderStatus('up', section);
             }
         });

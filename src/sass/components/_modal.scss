@@ -50,6 +50,11 @@
               max-width: 390px;
               padding: 70px 40px;
             }
+            @include d(600){
+              max-width: 390px;
+              padding: 70px 35px 50px;
+              min-height: 490px;
+            }
         }
         &-close{
           position: absolute;
@@ -124,6 +129,9 @@
           right: -21px;
           bottom: -4px;
           width: 440px;
+            @include d(600){
+              width: 370px;
+            }
         }
     }
 }
