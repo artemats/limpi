@@ -50,13 +50,13 @@ document.querySelectorAll('.anchor-scroll').forEach(link => {
         const anchorSection = document.getElementById(link.getAttribute('data-anchor'));
         const anchorSectionY = anchorSection.getBoundingClientRect().top + window.scrollY;
 
-        closeMenu();
-
         enableTransition = false;
         window.scrollTo(0, anchorSectionY);
         setTimeout(() => {
             enableTransition = true;
         }, 100);
+
+        window.innerWidth <= 1200 ? closeMenu() : null;
 
     });
 

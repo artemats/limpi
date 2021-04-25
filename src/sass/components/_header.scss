@@ -63,7 +63,7 @@
               transform: translateX(-50%);
               top: 49px;
               transition: top .2s ease;
-              z-index: 1;
+              z-index: 2;
                 @include m(1201){
                   display: none;
                 }

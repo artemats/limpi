@@ -21,14 +21,22 @@ export function openMenu() {
        display: 'block',
        onComplete: () => {
            navWrap.style.opacity = 1;
-           gsap.fromTo(navLinks, {
-                opacity: 0,
-                y: 30
-           },{
-               duration: 0.5,
-               opacity: 1,
-               y: 0,
-               stagger: 0.1
+           gsap.to(nav, {
+              duration: 1,
+              width: ( window.innerWidth - 20 ),
+              height: ( window.innerHeight - 20 ),
+               onComplete: () => {
+                  nav.classList.add('shadows');
+                   gsap.fromTo(navLinks, {
+                       opacity: 0,
+                       y: 30
+                   },{
+                       duration: 0.5,
+                       opacity: 1,
+                       y: 0,
+                       stagger: 0.1
+                   });
+               }
            });
        }
     });
@@ -48,6 +56,12 @@ export function closeMenu() {
                 duration: 0.2,
                 opacity: 0,
                 onComplete: () => {
+                    nav.classList.remove('shadows');
+                    gsap.to(nav, {
+                        duration: 0.2,
+                        width: 0,
+                        height: 0,
+                    });
                     navWrap.style.display = 'none';
                     burger.classList.remove('active');
                     header.classList.remove('is-open-menu');
