@@ -7,6 +7,7 @@ import {initCircleCarousel} from "../common/initCircleCarousel";
 import {stopHobbiesSwitcher, switchHobbies} from "../common/switchHobbies";
 import {initPricesCarousel} from "../common/initPricesCarousel";
 import {initHeroAnimation} from "../lottie/initHeroAnimation";
+import {initHowItWorksAnimation} from "../lottie/initHowItWorksAnimation";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -41,6 +42,7 @@ export function goToSection(section, anim) {
 function toDoWithOnSection(section) {
     detectLogoColor(section);
     section.getAttribute('id') === 'section-0' ? initHeroAnimation() : null;
+    section.getAttribute('id') === 'section-2' ? initHowItWorksAnimation() : null;
     section.getAttribute('id') === 'section-3' ? initPricesCarousel() : null;
     section.getAttribute('id') === 'section-4' ? switchHobbies() : stopHobbiesSwitcher();
     section.getAttribute('id') === 'section-5' ? initCircleCarousel() : null;
