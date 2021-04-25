@@ -44,15 +44,29 @@
         width: 75vw;
         height: 52vw;
       }
+      @include d(600){
+        margin: 75px auto -5px;
+        width: 89vw;
+        height: 63vw;
+      }
   }
   .content-column{
     &:nth-child(1){
       @include d(1200){
         padding-top: 62px;
       }
+      @include d(600){
+        padding-top: 30px;
+          .link-btn{
+            width: 100%;
+          }
+      }
     }
   }
   @include d(1200){
     text-align: center;
+  }
+  @include d(600){
+    text-align: left;
   }
 }

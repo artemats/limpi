@@ -1,6 +1,4 @@
 .prices{
-  display: flex;
-  flex-direction: row-reverse;
   margin: 0 -30px;
     &-box{
       overflow: hidden;
@@ -21,6 +19,9 @@
             @include d(1440){
               height: 82px;
               margin-bottom: 45px;
+            }
+            @include d(600){
+              height: 78px;
             }
         }
         &-title{
@@ -51,19 +52,25 @@
               height: 143px;
               margin: 18px auto 40px;
             }
+            @include d(600){
+              width: 136px;
+              height: 136px;
+            }
         }
         &-illustration{
           position: absolute;
         }
-        &:nth-child(1){
-          opacity: .95;
-          transform: scale(.9);
+        &:nth-child(odd){
             .prices-box-illustration{
-            left: 50%;
-            transform: translateX(-50%);
-            top: -50px;
-            width: 156px;
-          }
+              left: 50%;
+              transform: translateX(-50%);
+              top: -50px;
+              width: 156px;
+            }
+            @include m(601){
+              opacity: .95;
+              transform: scale(.9);
+            }
             @include hover(991){
               &:hover{
                 transform: scale(1);
@@ -75,7 +82,7 @@
               }
             }
         }
-        &:nth-child(2){
+        &:nth-child(even){
           .prices-box-illustration{
             width: 118%;
             left: -43px;
@@ -90,6 +97,10 @@
           padding: 0 0 60px;
           margin: 0 10px;
         }
+        @include d(600){
+          width: 278px;
+          padding: 0 0 55px;
+        }
     }
     &-price{
       font-size: 58px;
@@ -102,11 +113,39 @@
         font-size: 48px;
       }
     }
+    .splide{
+      &__list {
+        flex-direction: row-reverse;
+      }
+      &__pagination{
+        margin-top: 15px;
+          &__page {
+            &:before {
+              background-color: var(--color-pink);
+            }
+          }
+      }
+    }
+    @include m(601){
+      visibility: visible;
+        .splide__list{
+          display: flex;
+          flex-direction: row-reverse;
+          width: 100%;
+        }
+    }
     @include d(1440){
       padding: 15px;
     }
     @include d(1200){
       padding: 0;
       margin: 0 -10px 40px;
+    }
+    @include d(600){
+      margin: 0 -30px 40px;
+      padding: 0 20px;
+        .splide__track{
+          overflow: visible;
+        }
     }
 }

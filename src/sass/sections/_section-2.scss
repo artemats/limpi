@@ -16,8 +16,18 @@
         }
     }
     &-box{
+      &-subcontent {
+        .link-btn {
+          @include d(600) {
+            width: 100%;
+          }
+        }
+      }
       @include d(1200){
         padding-bottom: 122px;
+      }
+      @include d(600){
+        padding-bottom: 33px;
       }
     }
   }
@@ -30,6 +40,10 @@
         @include d(1200){
           padding-top: 13px;
           padding-bottom: 48px;
+        }
+        @include d(600){
+          padding-top: 21px;
+          padding-bottom: 58px;
         }
     }
   }
@@ -63,6 +77,9 @@
         margin: -202px auto 0;
         position: relative;
         right: 0;
+      }
+      @include d(600){
+        margin: -108px auto 0;
       }
   }
 }

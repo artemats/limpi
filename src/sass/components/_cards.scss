@@ -12,6 +12,9 @@
       flex-direction: column;
       margin: 45px 0 40px;
     }
+    @include d(600){
+      margin: 34px 0 36px;
+    }
 }
 
 .card{
@@ -31,6 +34,9 @@
           font-family: var(--font-bold);
           line-height: 1.867em;
           margin-bottom: 13px;
+            @include d(600){
+              margin-bottom: 17px;
+            }
         }
         &-title{
           display: -webkit-box;
@@ -51,6 +57,10 @@
               font-size: 30px;
               max-width: 295px;
             }
+            @include d(600){
+              font-size: 22px;
+              max-width: 80%;
+            }
         }
         &-illustration{
           position: absolute;
@@ -67,6 +77,9 @@
           padding: 40px 40px 52px;
           height: auto;
         }
+        @include d(600){
+          padding: 24px 20px 35px;
+        }
     }
     &:nth-child(1){
       .card-box-illustration{
@@ -82,6 +95,12 @@
           }
           @include d(1200){
             right: -21px;
+          }
+          @include d(600){
+            width: 104px;
+            height: 135px;
+            top: 15px;
+            right: -25px;
           }
       }
     }
@@ -101,6 +120,12 @@
             top: -24px;
             right: -16px;
           }
+          @include d(600){
+            top: -15px;
+            right: -16px;
+            width: 115px;
+            height: 168px;
+          }
       }
     }
     &:nth-child(3){
@@ -119,6 +144,12 @@
             top: 62px;
             right: -31px;
           }
+          @include d(600){
+            width: 118px;
+            height: 120px;
+            top: 42px;
+            right: -24px;
+          }
       }
     }
     @include d(1600){
@@ -135,5 +166,8 @@
     }
     @include d(991){
       max-width: 508px;
+    }
+    @include d(600){
+      padding: 0;
     }
 }

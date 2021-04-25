@@ -17,6 +17,9 @@
             p, li{
               font-size: inherit;
             }
+            @include d(600){
+              font-size: 16px;
+            }
         }
         &-btn{
           position: absolute;
@@ -42,6 +45,10 @@
               width: 14px;
               height: 2px;
             }
+            @include d(600){
+              right: 7px;
+              top: 4px;
+            }
         }
         &.open{
           .accordion-box{
@@ -54,6 +61,9 @@
               }
             }
           }
+        }
+        @include d(600){
+          padding: 22px 0 21px;
         }
     }
     @include d(1440){

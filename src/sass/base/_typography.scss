@@ -11,6 +11,12 @@ h1{
     @include d(1400){
       font-size: 62px;
     }
+    @include d(600){
+      font-size: 40px;
+    }
+    @include d(350){
+      font-size: 36px;
+    }
 }
 
 h2{
@@ -22,6 +28,9 @@ h2{
     }
     @include d(1200){
       font-size: 42px;
+    }
+    @include d(600){
+      font-size: 32px;
     }
 }
 
@@ -35,6 +44,9 @@ h3{
     @include d(1200){
       font-size: 42px;
     }
+    @include d(600){
+      font-size: 28px;
+    }
 }
 
 h4{
@@ -44,6 +56,9 @@ h4{
     @include d(1600){
       font-size: 30px;
     }
+    @include d(600){
+      font-size: 26px;
+    }
 }
 
 h5{
@@ -52,6 +67,9 @@ h5{
   line-height: 1.3em;
     @include d(1440){
       font-size: 22px;
+    }
+    @include d(600){
+      font-size: 18px;
     }
 }
 
@@ -64,5 +82,8 @@ p, li{
     }
     @include d(1200){
       font-size: 22px;
+    }
+    @include d(600){
+      font-size: 18px;
     }
 }

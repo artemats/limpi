@@ -37,6 +37,7 @@
           margin-top: auto;
           margin-bottom: auto;
           position: relative;
+          overflow: hidden;
             .link-btn{
               width: 100%;
               margin-top: 28px;
@@ -44,6 +45,10 @@
             @include d(1440){
               max-width: 450px;
               padding: 90px 60px 85px;
+            }
+            @include d(768){
+              max-width: 390px;
+              padding: 70px 40px;
             }
         }
         &-close{

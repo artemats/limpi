@@ -77,6 +77,9 @@
                 }
             }
         }
+        .burger-box-arrow{
+          background-color: var(--color-black);
+        }
         @include d(1440){
           top: 35px;
         }
@@ -85,6 +88,9 @@
           left: 20px;
           right: 20px;
           width: calc(100% - 40px);
+        }
+        @include d(600){
+          top: 10px;
         }
     }
     &.hidden{
@@ -99,11 +105,17 @@
         @include d(1200){
           top: -80px;
         }
+        @include d(600){
+          top: -68px;
+        }
     }
     .container{
       max-width: 100%;
         @include d(1800){
           padding: 0 25px;
+        }
+        @include d(600){
+          padding: 0 20px;
         }
     }
     @include d(1800){
@@ -118,5 +130,12 @@
     }
     @include d(1200){
       top: 24px;
+    }
+    @include d(600){
+      left: 15px;
+      right: 15px;
+      top: 15px;
+      width: calc(100% - 30px);
+      padding: 5px 0;
     }
 }

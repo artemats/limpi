@@ -43,6 +43,9 @@
         max-width: 800px;
         margin: 0 auto;
       }
+      @include d(600){
+        padding-top: 30px;
+      }
       .section-action{
         @include d(1200){
           display: none;

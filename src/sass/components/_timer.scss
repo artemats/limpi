@@ -8,6 +8,7 @@
         &-btn{
           width: 50px;
           height: 50px;
+          min-width: 50px;
           border-radius: 50%;
           position: relative;
           background-color: transparent;
@@ -83,8 +84,14 @@
           width: 242px;
           height: 242px;
           margin: 0 auto;
+          position: relative;
+          z-index: 1;
             @include d(1200){
               background-color: transparent;
+            }
+            @include d(600){
+              width: 100%;
+              height: 146px;
             }
         }
         @include d(1440){
@@ -93,6 +100,10 @@
         @include d(1200){
           margin: 6px auto 21px;
           max-width: 330px;
+        }
+        @include d(600){
+          max-width: 260px;
+          margin: 0 auto 28px;
         }
     }
     &-clock{
@@ -117,6 +128,11 @@
             margin: 118px auto 70px;
             padding-bottom: 27px;
           }
+          @include d(600){
+            width: 60vw;
+            height: 60vw;
+            margin: 84px auto 70px;
+          }
       }
     }
     &-title{
@@ -126,11 +142,17 @@
         @include d(1200){
           font-size: 140px;
         }
+        @include d(600){
+          font-size: 100px;
+        }
     }
     &-subtitle{
       font-family: var(--font-bold);
         @include d(1200){
           font-size: 24px;
+        }
+        @include d(600){
+          font-size: 18px;
         }
     }
     &-image{
@@ -227,5 +249,9 @@
     @include d(1200){
       width: 540px;
       height: 540px;
+    }
+    @include d(600){
+      width: 100vw;
+      height: 100vw;
     }
 }

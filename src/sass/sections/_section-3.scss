@@ -1,37 +1,45 @@
-#section {
-  &-3 {
-    .section {
-      &-label,
-      &-title,
-      &-subtitle,
-      &-description {
-        max-width: 500px;
+#section-3 {
+  .section {
+    &-label,
+    &-title,
+    &-subtitle,
+    &-description {
+      max-width: 500px;
+    }
+    &-description{
+      @include d(1440){
+        max-width: 415px;
       }
-      &-description{
-        @include d(1440){
-          max-width: 415px;
-        }
-        @include d(1200){
-          max-width: 550px;
-        }
-      }
-      &-circle{
-        top: 50%;
-        right: 0;
-        transform: translate(36%,-50%);
+      @include d(1200){
+        max-width: 550px;
       }
     }
-    .content-column{
-      &:nth-child(1){
-        max-width: 46%;
-          @include d(1440){
-            padding-bottom: 75px;
-          }
-          @include d(1200){
-            max-width: 100%;
-            padding-bottom: 50px;
-          }
+    &-circle{
+      top: 50%;
+      right: 0;
+      transform: translate(36%,-50%);
+    }
+    &-box{
+      @include d(600){
+        padding-top: 67px;
+        padding-bottom: 41px;
+        overflow: visible;
       }
+    }
+  }
+  .content-column{
+    &:nth-child(1){
+      max-width: 46%;
+        @include d(1440){
+          padding-bottom: 75px;
+        }
+        @include d(1200){
+          max-width: 100%;
+          padding-bottom: 50px;
+        }
+        @include d(600){
+          padding-bottom: 40px;
+        }
     }
   }
 }

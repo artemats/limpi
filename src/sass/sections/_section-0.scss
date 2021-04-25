@@ -32,6 +32,9 @@
         @include d(1200){
           padding-bottom: 8px;
         }
+        @include d(600){
+          padding-bottom: 1px;
+        }
     }
   }
   .illustration{
@@ -73,6 +76,12 @@
         width: 96vw;
         height: 59.5vw;
       }
+      @include d(600){
+        right: 22px;
+        margin-top: 52px;
+        width: 114vw;
+        height: 70vw;
+      }
   }
   .content-column{
     &:nth-child(1){
@@ -81,6 +90,9 @@
       }
       @include d(1200){
         padding-top: 72px;
+      }
+      @include d(600){
+        padding-top: 62px;
       }
     }
   }
