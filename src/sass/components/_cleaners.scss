@@ -79,6 +79,8 @@
           right: 0;
           bottom: 0;
           border-radius: 50%;
+          transform: rotate(-90deg);
+          transform-origin: center;
             .progress-ring{
               position: absolute;
               top: 0;
@@ -88,8 +90,6 @@
             }
             circle{
               transition: stroke-dashoffset 0.4s ease;
-              transform: rotate(-90deg);
-              transform-origin: center;
               stroke: var(--color-blue);
               stroke-dasharray: 527.788, 527.788;
               stroke-dashoffset: 527.788;
