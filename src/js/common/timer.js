@@ -20,10 +20,12 @@ function sub() {
 }
 
 // detect click events //
-document.querySelector('.timer-calculator-btn.__minus').addEventListener('click', function () {
-    sub();
-});
+if(!!time) {
+    document.querySelector('.timer-calculator-btn.__minus').addEventListener('click', function () {
+        sub();
+    });
 
-document.querySelector('.timer-calculator-btn.__plus').addEventListener('click', function () {
-    add();
-});
+    document.querySelector('.timer-calculator-btn.__plus').addEventListener('click', function () {
+        add();
+    });
+}

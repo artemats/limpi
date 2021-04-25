@@ -8,10 +8,6 @@ export function detectHeaderStatus(direction, section) {
     } else {
         header.classList.remove('hidden');
     }
-    /// for last section ///
-    // if(section.getAttribute('id') === 'section-7') {
-    //     header.classList.remove('hidden');
-    // }
 
     /// for first section ///
     if(section.getAttribute('id') === 'section-0') {
@@ -19,14 +15,4 @@ export function detectHeaderStatus(direction, section) {
     } else {
         header.classList.add('smart');
     }
-
-    /// change header style ///
-    // window.addEventListener('scroll', () => {
-    //    if(window.scrollY <= 0) {
-    //         header.classList.remove('smart');
-    //    } else {
-    //        header.classList.add('smart');
-    //    }
-    // });
-
 }

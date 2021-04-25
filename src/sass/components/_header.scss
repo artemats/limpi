@@ -188,6 +188,15 @@
         fill: var(--color-blue-100) !important;
       }
     }
+    &.__inner{
+      color: var(--color-black);
+        .logo-star{
+          fill: var(--color-blue);
+        }
+        .burger-box-arrow{
+          background-color: var(--color-black);
+        }
+    }
     .container{
       max-width: 100%;
         @include d(1800){

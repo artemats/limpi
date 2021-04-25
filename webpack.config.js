@@ -114,6 +114,13 @@ module.exports = {
                 collapseWhitespace: false
             },
         }),
+        new HtmlWebpackPlugin({
+            filename: 'data.html',
+            template: path.resolve(__dirname, 'src/html', 'data.html'),
+            minify: {
+                collapseWhitespace: false
+            },
+        }),
     ],
     mode: 'production',
     optimization: {
