@@ -74,13 +74,15 @@
         }
         &-loader{
           position: absolute;
-          top: 0;
-          left: 0;
+          top: 50%;
+          left: 50%;
           right: 0;
           bottom: 0;
           border-radius: 50%;
-          transform: rotate(-90deg);
+          transform: translate(-50%,-50%) rotate(-90deg);
           transform-origin: center;
+          width: 172px;
+          height: 172px;
             .progress-ring{
               position: absolute;
               top: 0;
@@ -93,6 +95,12 @@
               stroke: var(--color-blue);
               stroke-dasharray: 527.788, 527.788;
               stroke-dashoffset: 527.788;
+            }
+            @include d(1440){
+              transform: translate(-50%, -50%) rotate(-90deg) scale(0.8);
+            }
+            @include d(600){
+              transform: translate(-50%, -50%) rotate(-90deg) scale(0.85);
             }
         }
         &.center{

@@ -13,7 +13,7 @@ export function initCircleCarousel() {
         speed: 0,
         arrows: false,
         pagination: true,
-        // autoplay: true,
+        autoplay: true,
         interval: 5000,
         resetProgress: true,
         pauseOnHover: false,
@@ -26,8 +26,12 @@ export function initCircleCarousel() {
         autoWidth: true,
         // focus: 'center',
         arrows: false,
-        speed: 600,
-        // trimSpace: false
+        speed: 1000,
+        autoplay: true,
+        interval: 5000,
+        resetProgress: true,
+        pauseOnHover: false,
+        pauseOnFocus: false,
     };
     let currentOptions = {};
 
