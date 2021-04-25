@@ -5,6 +5,7 @@ import {goToSection} from "./goToSection";
 import {hideScaleSection} from "./hideScaleSection";
 import {showScaleSection} from "./showScaleSection";
 import {detectHeaderStatus} from "./detectHeaderStatus";
+import {closeMenu} from "../common/toggleMobileMenu";
 
 gsap.registerPlugin(ScrollTrigger);
 let enableTransition = true;
@@ -48,6 +49,8 @@ document.querySelectorAll('.anchor-scroll').forEach(link => {
         event.preventDefault();
         const anchorSection = document.getElementById(link.getAttribute('data-anchor'));
         const anchorSectionY = anchorSection.getBoundingClientRect().top + window.scrollY;
+
+        closeMenu();
 
         enableTransition = false;
         window.scrollTo(0, anchorSectionY);

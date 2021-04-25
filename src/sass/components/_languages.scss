@@ -21,7 +21,10 @@
           opacity: .1;
           background-color: var(--color-white);
           border-radius: 50%;
-          transition: background-color .4s ease;
+          transition: background-color .4s ease, opacity .2s ease;
+            @include d(1200){
+              opacity: 0;
+            }
         }
         @include d(1600){
           font-size: 18px;

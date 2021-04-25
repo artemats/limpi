@@ -6,6 +6,7 @@ import './common/detectButtonsClickEvent';
 import './common/inputMask';
 import './common/formSubmit';
 import './common/modal';
+import './common/toggleMobileMenu';
 
 /*
 Init scroll transitions

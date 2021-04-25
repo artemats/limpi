@@ -37,6 +37,9 @@ li{
   display: inline-block;
   width: 119px;
   height: 36px;
+  transition: color .2s ease;
+  position: relative;
+  z-index: 1;
     svg{
       width: 100%;
       height: 100%;
