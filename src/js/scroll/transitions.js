@@ -72,7 +72,7 @@ document.querySelectorAll('.anchor-scroll').forEach(link => {
 
 });
 
-if(!document.querySelector('.scroll-wrapper')) {
+if(!document.querySelector('.scroll-wrapper') || window.innerWidth <= 1200) {
     /// change header style ///
     const header = document.querySelector('.header');
     let scrollPos = 0;
