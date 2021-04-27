@@ -83,22 +83,21 @@
     }
     &:nth-child(1){
       .card-box-illustration{
-        width: 137px;
-        height: 179px;
-        top: 30px;
-        right: -5px;
+        width: 157px;
+        height: 210px;
+        bottom: -11px;
+        right: -10px;
           @include d(1440){
-            width: 120px;
-            height: 165px;
-            top: 23px;
+            width: 150px;
+            height: 195px;
           }
           @include d(1200){
             right: 5px;
           }
           @include d(600){
-            width: 104px;
-            height: 135px;
-            top: 15px;
+            width: 116px;
+            height: 150px;
+            right: -10px;
           }
       }
     }

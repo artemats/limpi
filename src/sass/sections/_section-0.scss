@@ -59,6 +59,10 @@
         right: -17.5%;
         top: 18px;
       }
+      @include d(1430){
+        width: 50.8vw;
+        height: 30vw;
+      }
       @include d(1400){
         width: 50vw;
         height: 31vw;

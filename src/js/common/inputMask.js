@@ -1,5 +1,6 @@
 const name = document.querySelector('#input-name');
 const phone = document.querySelector('#input-phone');
+const inputs = document.querySelectorAll('.input');
 
 phone.addEventListener('input', function (e) {
     let x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,3})(\d{0,2})(\d{0,2})/);
@@ -8,6 +9,10 @@ phone.addEventListener('input', function (e) {
     let length = e.target.value.replace(/\s/g, '').replace(/[{()}]/g, '').length;
     if(length >= 9) {
         phone.classList.add('success');
+        phone.classList.remove('error');
+    } else {
+        phone.classList.remove('success');
+        phone.classList.add('error');
     }
 });
 
@@ -20,4 +25,33 @@ name.addEventListener('input', function (e) {
     }
 });
 
-// VMasker(phone).maskPattern('{380} (99) 999 99 99');
+for(let i = 0; i < inputs.length; i++) {
+    inputs[i].addEventListener('blur', checkLabelPosition);
+}
+
+function checkLabelPosition() {
+    for(let i = 0; i < inputs.length; i++) {
+        inputs[i].value.length > 0 ? inputs[i].classList.add('focus') : inputs[i].classList.remove('focus');
+    }
+}
+
+/// validation ///
+function hasEmptyFields() {
+    for(let i = 0; i < inputs.length; i++) {
+        if(inputs[i].value === '') {
+            inputs[i].classList.add('error');
+        } else if(phone.value.length < 14) {
+            phone.classList.add('error');
+        } else {
+            inputs[i].classList.remove('error');
+        }
+    }
+}
+
+export function isValidForm(form) {
+    hasEmptyFields();
+    let inputs = form.querySelectorAll('.input.error');
+    return !inputs.length;
+}
+
+checkLabelPosition();

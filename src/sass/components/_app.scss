@@ -1,10 +1,15 @@
 body{
   font-family: var(--font-medium);
   background-color: var(--color-white);
+  color: var(--color-black);
 }
 
 li{
   position: relative;
+}
+
+a[href^=tel]{
+  white-space: nowrap;
 }
 
 #wrapper{
@@ -52,17 +57,6 @@ li{
       width: 92px;
       height: 28px;
     }
-}
-
-.split{
-  &-row{
-    display: flex;
-    flex-wrap: wrap;
-  }
-  &-word{
-    margin-right: 5px;
-    display: inline;
-  }
 }
 
 .cta-quote{

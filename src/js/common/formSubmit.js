@@ -1,8 +1,9 @@
 import gsap from 'gsap';
+import {hasEmptyFields, isValidForm} from "./inputMask";
 
 document.querySelector('#order-form').addEventListener('submit', function (e) {
     e.preventDefault();
-    submitSuccess();
+    isValidForm(document.querySelector('#order-form')) ? submitSuccess() : null;
 });
 
 const form = document.querySelector('.modal-form');

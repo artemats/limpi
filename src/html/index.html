@@ -86,7 +86,7 @@
             <div class="languages-current">Ua</div>
             <div class="languages-modal">
               <div class="languages-list">
-                <a href="#" class="languages-list-link">
+                <a href="#" class="languages-list-link active">
                   <span class="languages-icon">
                     <img src="../images/icons/languages/ua.svg" alt="Ua" />
                   </span>
@@ -104,7 +104,7 @@
                   </span>
                   Ru
                 </a>
-                <a href="#" class="languages-list-link active">
+                <a href="#" class="languages-list-link">
                   <span class="languages-icon">
                     <img src="../images/icons/languages/pl.svg" alt="Pl" />
                   </span>
@@ -231,7 +231,7 @@
             <div class="align-center">
             <button class="link-btn purple-to-white default" data-modal="order">
               <span class="link-btn-bg"></span>
-              <span class="link-btn-title">Замовити придбання</span>
+              <span class="link-btn-title">Замовити прибирання</span>
             </button>
           </div>
           </div>
@@ -685,7 +685,7 @@
           <div class="footer-nav">
             <p class="footer-nav-label copyright">Усі права збережені &copy; 2021</p>
             <a href="data.html" class="link link-sm">Юридичні документи та Cookie</a>
-            <p class="footer-nav-label">Made by <img src="../images/developer.svg" alt="Made by" /></p>
+            <p class="footer-nav-label">Made by <a href="https://cosmos.studio/" target="_blank"><img src="../images/developer.svg" alt="Made by" /></a></p>
           </div>
         </div>
       </div>
@@ -707,23 +707,23 @@
       <div class="modal-form">
         <p class="h-3 modal-title">Ваші дані</p>
         <form id="order-form">
-        <label class="input-container">
-          <input type="text" class="input" required id="input-name" />
-          <span class="input-label">Ваше ім'я</span>
-          <span class="input-label-error">Помилка введення</span>
-        </label>
-        <label class="input-container">
-          <input type="tel" class="input" required id="input-phone" />
-          <span class="input-prefix">+ 380</span>
-          <span class="input-label">Ваш номер телефону</span>
-          <span class="input-label-error">Помилка введення</span>
-        </label>
-        <button class="link-btn pink-to-pink" type="submit">
-          <span class="link-btn-bg"></span>
-          <span class="link-btn-title">Замовити прибирання</span>
-        </button>
-        <p class="form-detail small"><span>Натискаючи кнопку «Замовити прибирання», ви погоджуєтеся на</span> <a href="#">обробку персональних даних.</a></p>
-      </form>
+          <label class="input-container">
+            <input type="text" class="input" id="input-name" />
+            <span class="input-label">Ваше ім'я</span>
+            <span class="input-label-error">Помилка введення</span>
+          </label>
+          <label class="input-container">
+            <input type="tel" class="input" id="input-phone" />
+            <span class="input-prefix">+ 380</span>
+            <span class="input-label">Ваш номер телефону</span>
+            <span class="input-label-error">Помилка введення</span>
+          </label>
+          <button class="link-btn pink-to-pink" type="submit">
+            <span class="link-btn-bg"></span>
+            <span class="link-btn-title">Замовити прибирання</span>
+          </button>
+          <p class="form-detail small"><span>Натискаючи кнопку «Замовити прибирання», ви погоджуєтеся на</span> <a href="#">обробку персональних даних.</a></p>
+        </form>
       </div>
       <div class="modal-success">
         <p class="h-3 modal-title">Дякуємо!</p>

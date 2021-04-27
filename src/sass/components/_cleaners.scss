@@ -11,7 +11,7 @@
       background-color: var(--color-white);
       border-radius: 20px;
       overflow: hidden;
-      padding: 75px 35px 110px;
+      padding: 75px 15px 110px;
       position: relative;
       height: 571px;
       //margin: 0 176px 30px auto;
@@ -107,6 +107,7 @@
           z-index: 1;
           opacity: 1;
           transform: translateX(0) scale(1);
+          cursor: pointer;
             .cleaners-box-loader{
               circle{
                 animation: progress 5s 1 ease-out;
@@ -132,7 +133,7 @@
           opacity: .8 !important;
           z-index: 0;
           pointer-events: auto;
-          cursor: pointer;
+          cursor: grab;
             @include d(1200){
               transform: translate(0) scale(1);
               opacity: 1 !important;
@@ -149,14 +150,14 @@
           transform: translateX(0) scale(.8);
           opacity: 0;
           z-index: -1;
-          pointer-events: none;
+          //pointer-events: none;
           transition: transform .6s ease-out, opacity .6s ease-out !important;
         }
         @include d(1440){
           max-width: 278px;
           height: 442px;
           border-radius: 15px;
-          padding: 46px 35px 80px;
+          padding: 46px 15px 80px;
         }
         @include d(1200){
           &:not(:last-child){

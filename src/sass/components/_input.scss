@@ -46,9 +46,8 @@
       outline: none;
       border-bottom-color: var(--color-blue);
     }
-    &:valid,
     &:focus,
-    &:focus:valid{
+    &.focus{
       & ~ .input-label{
         text-transform: uppercase;
         font-size: 14px;

@@ -10,7 +10,7 @@ import {initHeroAnimation} from "../lottie/initHeroAnimation";
 import {initHowItWorksAnimation} from "../lottie/initHowItWorksAnimation";
 import {initCtaAnimation} from "../lottie/initCtaAnimation";
 import {initFooterStars} from "../lottie/initFooterStars";
-import {initChartAnimation, stopChartAnimation} from "../common/initChartAnimation";
+import {initChartAnimation} from "../common/initChartAnimation";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -45,7 +45,7 @@ export function goToSection(section, anim) {
 function toDoWithOnSection(section) {
     detectLogoColor(section);
     section.getAttribute('id') === 'section-0' ? initHeroAnimation() : null;
-    section.getAttribute('id') === 'section-1' ? initChartAnimation() : stopChartAnimation();
+    section.getAttribute('id') === 'section-1' ? initChartAnimation() : null;
     section.getAttribute('id') === 'section-2' ? initHowItWorksAnimation() : null;
     section.getAttribute('id') === 'section-3' ? initPricesCarousel() : null;
     section.getAttribute('id') === 'section-4' ? switchHobbies() : stopHobbiesSwitcher();

@@ -10,6 +10,7 @@ export function initPricesCarousel() {
             // focus: 'center',
             arrows: false,
             speed: 600,
+            start: 1
         }).mount();
     }
 }

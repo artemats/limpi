@@ -66,11 +66,13 @@
       border: none;
       position: relative;
       color: var(--color-white);
+      background-color: transparent;
       transition: color .4s cubic-bezier(0.1, 0, 0.3, 1);
         &-title{
           position: relative;
           color: inherit;
           pointer-events: none;
+          z-index: 1;
         }
         &-bg{
           position: absolute;
@@ -82,6 +84,7 @@
           border-radius: 100px;
           transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
           background-color: var(--color-blue);
+          pointer-events: none;
             &:before,
             &:after{
               content: '';

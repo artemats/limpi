@@ -58,10 +58,10 @@ export function initCircleCarousel() {
             slides[next].classList.add('next');
         });
 
-        if(window.innerWidth > 1200) {
+        // for init start //
+        circleCarousel.go(1);
 
-            // for init start //
-            circleCarousel.go(1);
+        if(window.innerWidth > 1200) {
 
             // slides click events //
             for(let i = 0; i < slides.length; i++) {
