@@ -15,4 +15,15 @@ export function detectHeaderStatus(direction, section) {
     } else {
         header.classList.add('smart');
     }
+
+    if(window.innerWidth <= 1200) {
+        window.addEventListener('scroll', () => {
+            if(window.scrollY > 0) {
+                header.classList.add('hidden');
+            } else {
+                header.classList.remove('hidden');
+            }
+        });
+    }
+
 }
