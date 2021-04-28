@@ -9,10 +9,15 @@ window.addEventListener('scroll', () => {
         header.classList.add('smart');
     }
 
-    if ((document.body.getBoundingClientRect()).top > scrollPos)
+    if ((document.body.getBoundingClientRect()).top > scrollPos) {
         header.classList.remove('hidden');
-    else
+    } else {
         header.classList.add('hidden');
+    }
+
+    if(window.scrollY === 0) {
+        header.classList.remove('hidden');
+    }
 
     scrollPos = (document.body.getBoundingClientRect()).top;
 
