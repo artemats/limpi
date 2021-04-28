@@ -3,7 +3,7 @@ export function detectHeaderStatus(direction, section) {
     const header = document.querySelector('.header');
 
     /// toggle header position ///
-    if(direction === 'down' && window.scrollY > 0) {
+    if(direction === 'down') {
         header.classList.add('hidden');
     } else {
         header.classList.remove('hidden');
@@ -16,14 +16,14 @@ export function detectHeaderStatus(direction, section) {
         header.classList.add('smart');
     }
 
-    if(window.innerWidth <= 1200) {
-        window.addEventListener('scroll', () => {
-            if(window.scrollY > 0) {
-                header.classList.add('hidden');
-            } else {
-                header.classList.remove('hidden');
-            }
-        });
-    }
+    // if(window.innerWidth <= 1200) {
+    //     window.addEventListener('scroll', () => {
+    //         if(window.scrollY > 0) {
+    //             header.classList.add('hidden');
+    //         } else {
+    //             header.classList.remove('hidden');
+    //         }
+    //     });
+    // }
 
 }

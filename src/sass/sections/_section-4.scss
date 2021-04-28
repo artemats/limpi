@@ -2,10 +2,9 @@
   .section{
     &-box{
       &-bg{
-        width: 50%;
-        right: 0;
+        right: 30px;
         background-color: var(--color-blue-100);
-        border-radius: 5px 0 0 5px;
+        border-radius: 5px 15px 15px 5px;
           &:before{
             content: '';
             position: absolute;
@@ -16,6 +15,9 @@
             border-radius: 5px;
             background-color: var(--color-blue-200);
             transform: translateY(-50%) rotate(45deg);
+          }
+          @include d(1440){
+            right: 20px;
           }
           @include d(1200){
             display: none;

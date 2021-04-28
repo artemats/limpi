@@ -90,25 +90,25 @@
     }
     &-link{
       &.active{
-        &[data-anchor="section-1"]{
+        &[data-menuanchor="1"]{
           color: var(--color-blue-200);
         }
-        &[data-anchor="section-2"]{
+        &[data-menuanchor="2"]{
           color: var(--color-purple-100);
         }
-        &[data-anchor="section-3"]{
+        &[data-menuanchor="3"]{
           color: var(--color-pink-100);
         }
-        &[data-anchor="section-4"]{
+        &[data-menuanchor="4"]{
           color: var(--color-blue-200);
         }
-        &[data-anchor="section-5"]{
+        &[data-menuanchor="5"]{
           color: var(--color-green);
         }
-        &[data-anchor="section-6"]{
+        &[data-menuanchor="6"]{
           color: var(--color-blue);
         }
-        &[data-anchor="section-7"]{
+        &[data-menuanchor="7"]{
           color: var(--color-purple-100);
         }
       }

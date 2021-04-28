@@ -33,29 +33,45 @@
 
 .bg{
     &-blue{
-      background-color: var(--color-blue);
+        &:before{
+          background-color: var(--color-blue);
+        }
         &-100{
-          background-color: var(--color-blue-100);
           color: var(--color-white);
+            &:before{
+              background-color: var(--color-blue-100);
+            }
         }
         &-200{
-          background-color: var(--color-blue-200);
+          &:before{
+            background-color: var(--color-blue-200);
+          }
         }
     }
     &-purple{
-      background-color: var(--color-purple);
+        &:before{
+          background-color: var(--color-purple);
+        }
         &-100{
-          background-color: var(--color-purple-100);
+          &:before{
+            background-color: var(--color-purple-100);
+          }
         }
     }
     &-pink{
-      background-color: var(--color-pink);
+        &:before{
+          background-color: var(--color-pink);
+        }
         &-100{
-          background-color: var(--color-pink-100);
+          &:before{
+            background-color: var(--color-pink-100);
+          }
         }
     }
     &-green{
-      background-color: var(--color-green);
+      &:before{
+        background-color: var(--color-green);
+      }
     }
 }
 
