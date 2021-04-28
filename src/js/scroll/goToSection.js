@@ -42,15 +42,15 @@ export function goToSection(section, anim) {
     return true;
 }
 
-function toDoWithOnSection(section) {
+export function toDoWithOnSection(section) {
     detectLogoColor(section);
-    // section.getAttribute('id') === 'section-0' ? initHeroAnimation() : null;
+    section.getAttribute('id') === 'section-0' ? initHeroAnimation() : null;
     section.getAttribute('id') === 'section-1' ? initChartAnimation() : null;
-    // section.getAttribute('id') === 'section-2' ? initHowItWorksAnimation() : null;
+    section.getAttribute('id') === 'section-2' ? initHowItWorksAnimation() : null;
     section.getAttribute('id') === 'section-3' ? initPricesCarousel() : null;
     section.getAttribute('id') === 'section-4' ? switchHobbies() : stopHobbiesSwitcher();
     section.getAttribute('id') === 'section-5' ? initCircleCarousel() : null;
-    // section.getAttribute('id') === 'section-7' ? initCtaAnimation() : null;
+    section.getAttribute('id') === 'section-7' ? initCtaAnimation() : null;
     section.getAttribute('id') === 'section-8' ? initFooterStars() : null;
 }
 
