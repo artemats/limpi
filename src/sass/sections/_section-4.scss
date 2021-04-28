@@ -179,7 +179,8 @@
   .link-btn{
     margin-bottom: 40px;
   }
-  &.in-viewport{
+  &.in-viewport,
+  &.active{
     .hobbies-item{
       &.show{
         opacity: 1;

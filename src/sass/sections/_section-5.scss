@@ -21,7 +21,8 @@
       }
     }
   }
-  &.in-viewport{
+  &.in-viewport,
+  &.active{
     .cleaners-box{
       &.center{
         .cleaners-box-loader{

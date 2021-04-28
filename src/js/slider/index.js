@@ -1,9 +1,7 @@
 import '../../libs/scrolloverflow.min';
 import fullpage from 'fullpage.js';
-import {hideScaleSection} from "../scroll/hideScaleSection";
 import {detectHeaderStatus} from "../scroll/detectHeaderStatus";
-import {showScaleSection} from "../scroll/showScaleSection";
-import {toDoWithOnSection} from "../scroll/goToSection";
+import {detectSectionAction} from "./detectSectionAction";
 
 export function initFullSlider() {
 
@@ -14,17 +12,15 @@ export function initFullSlider() {
         responsiveWidth: 1201,
         responsiveSlides: true,
         onLeave: (origin, destination, direction) => {
-            console.log(direction);
+            detectHeaderStatus(direction, destination.item);
+            // console.log('on leave - ', origin.item);
+            // console.log('on enter - ', destination.item);
             if(direction === 'down') {
-                hideScaleSection(origin.item);
-                detectHeaderStatus('down', destination.item);
+                origin.item.classList.add('scale');
             } else {
-                showScaleSection(destination.item);
-                detectHeaderStatus('up', destination.item);
+                destination.item.classList.remove('scale');
             }
-            toDoWithOnSection(destination.item);
-            console.log('on leave - ', origin.item);
-            console.log('on enter - ', destination.item);
+            detectSectionAction(destination.item.getAttribute('id'));
         }
     });
 

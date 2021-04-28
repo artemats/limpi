@@ -1,11 +1,12 @@
 .section{
   position: relative;
-  padding: 0 30px;
-  min-height: 100vh;
+  transition: transform 1s ease, opacity 1s ease;
+  //padding: 0 30px;
+  //min-height: 100vh;
   // space for next section //
   //margin-bottom: 5px;
     &-box{
-      min-height: calc(100vh - 60px);
+      //min-height: calc(100vh - 60px);
       height: 100%;
       border-radius: 15px;
       padding: 130px 0;
@@ -42,7 +43,7 @@
           top: 0;
         }
         @include d(1440){
-          min-height: calc(100vh - 40px);
+          //min-height: calc(100vh - 40px);
           padding: 110px 0;
         }
         @include d(1200){
@@ -207,14 +208,20 @@
           display: none;
         }
     }
+    &.scale{
+      @include m(1201){
+        opacity: 0;
+        transform: scale(0.8) translateY(100vh);
+      }
+    }
     & > .fp-tableCell{
-      padding: 30px 0;
-        @include d(1440){
-          padding: 20px 0;
-        }
-        @include d(1200){
-          padding: 0;
-        }
+      //padding: 30px 0;
+      //  @include d(1440){
+      //    padding: 20px 0;
+      //  }
+      //  @include d(1200){
+      //    padding: 0;
+      //  }
     }
     @include d(1440){
       padding: 0 20px;

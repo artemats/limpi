@@ -1,7 +1,7 @@
 .footer{
   border-radius: 15px;
   //margin: 15px 30px 30px;
-  margin: 15px 30px 0;
+  //margin: 15px 30px 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -167,6 +167,12 @@
       pointer-events: none;
       transition: opacity .4s ease;
     }
+    .fp-scrollable{
+      @include m(1201){
+        display: flex;
+        align-items: flex-end;
+      }
+    }
     @include m(1201){
       &.in-viewport{
         &:before{
@@ -180,9 +186,9 @@
       }
     }
     @include d(1440){
-      margin: 10px 20px 0;
+      //margin: 10px 20px 0;
     }
     @include d(1200){
-      margin: 10px 10px 0;
+      //margin: 10px 10px 0;
     }
 }
