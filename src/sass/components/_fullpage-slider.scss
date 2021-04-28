@@ -1,5 +1,16 @@
 .fp{
+    &-table{
+      @include d(1200){
+        height: auto !important;
+      }
+    }
     &-scroller{
       width: 100%;
+    }
+    &-tableCell{
+      @include d(1200){
+        display: block;
+        height: auto !important;
+      }
     }
 }
