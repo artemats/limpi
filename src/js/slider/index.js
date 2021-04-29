@@ -15,10 +15,10 @@ export function initFullSlider() {
         anchors:['0', '1', '2', '3', '4', '5', '6', '7', '8'],
         menu: '#nav',
         scrollOverflow: true,
-        scrollOverflowReset: true,
+        // scrollOverflowReset: true,
         scrollingSpeed: 1000,
         responsiveWidth: 1201,
-        responsiveSlides: true,
+        // responsiveSlides: true,
         lockAnchors: true,
         onLeave: (origin, destination, direction) => {
             detectHeaderStatus(direction, destination.item);
