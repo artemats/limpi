@@ -1,21 +1,28 @@
 import lottie from 'lottie-web';
 
+const box = document.querySelector('#footer-stars');
+let stars;
+
 export const initFooterStars = () => {
 
-    const box = document.querySelector('#footer-stars');
-
     if(!box.classList.contains('active')) {
-        // lottie.loadAnimation({
-        //     container: box,
-        //     renderer: 'canvas',
-        //     loop: true,
-        //     autoplay: true,
-        //     path: 'lottie/star.json',
-        //     rendererSettings: {
-        //         progressiveLoad: true,
-        //         hideOnTransparent: true
-        //     }
-        // });
+        stars = lottie.loadAnimation({
+            container: box,
+            renderer: 'canvas',
+            loop: true,
+            autoplay: true,
+            path: 'lottie/Illustration - Footer Stars.json',
+            rendererSettings: {
+                progressiveLoad: true,
+                hideOnTransparent: true
+            }
+        });
+        box.classList.add('active');
+    } else {
+        stars.play();
     }
+};
 
+export const stopFooterStars = () => {
+  !!stars ? stars.stop() : null;
 };

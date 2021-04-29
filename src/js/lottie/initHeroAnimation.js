@@ -1,12 +1,13 @@
 import lottie from 'lottie-web';
 import gsap from 'gsap';
 
+const box = document.querySelector('#hero-animation');
+let hero;
+
 export const initHeroAnimation = () => {
 
-    const box = document.querySelector('#hero-animation');
-
     if(!box.classList.contains('active')) {
-        const hero = lottie.loadAnimation({
+        hero = lottie.loadAnimation({
             container: box,
             renderer: 'canvas',
             loop: true,
@@ -28,8 +29,13 @@ export const initHeroAnimation = () => {
                duration: 0.5
            });
         });
-
         box.classList.add('active');
+    } else {
+        hero.play();
     }
 
+};
+
+export const stopHeroAnimation = () => {
+    !!hero ? hero.stop() : null;
 };

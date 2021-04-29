@@ -23,10 +23,8 @@ export function initFullSlider() {
         onLeave: (origin, destination, direction) => {
             detectHeaderStatus(direction, destination.item);
             if(direction === 'down') {
-                // origin.item.classList.add('scale');
                 hidePrevSections(parseInt(destination.item.getAttribute('data-anchor')));
             } else {
-                // destination.item.classList.remove('scale');
                 showNextSections(parseInt(destination.item.getAttribute('data-anchor')));
             }
             detectSectionAction(destination.item.getAttribute('id'));

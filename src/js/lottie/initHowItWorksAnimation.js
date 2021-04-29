@@ -1,14 +1,15 @@
 import lottie from 'lottie-web';
 import gsap from 'gsap';
 
+const box = document.querySelector('#how-it-works');
+const steps = document.querySelectorAll('.card-box-illustration');
+const cards = document.querySelectorAll('.card');
+let person;
+
 export const initHowItWorksAnimation = () => {
 
-    const box = document.querySelector('#how-it-works');
-    const steps = document.querySelectorAll('.card-box-illustration');
-    const cards = document.querySelectorAll('.card');
-
     if(!box.classList.contains('active')) {
-        lottie.loadAnimation({
+        person = lottie.loadAnimation({
             container: box,
             renderer: 'canvas',
             loop: true,
@@ -42,11 +43,8 @@ export const initHowItWorksAnimation = () => {
                     hideOnTransparent: true
                 }
             });
-
             cards[i].addEventListener('mouseenter', () => lot.play());
             cards[i].addEventListener('mouseleave', () => lot.stop());
         }
-
     }
-
 };
