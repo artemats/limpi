@@ -9,15 +9,15 @@ window.addEventListener('scroll', () => {
         header.classList.add('smart');
     }
 
-    if ((document.body.getBoundingClientRect()).top > scrollPos) {
+    if ((document.body.getBoundingClientRect()).top > scrollPos || window.scrollY <= 0) {
         header.classList.remove('hidden');
     } else {
         header.classList.add('hidden');
     }
 
-    if(window.scrollY === 0) {
-        header.classList.remove('hidden');
-    }
+    // if(window.scrollY === 0) {
+    //     header.classList.remove('hidden');
+    // }
 
     scrollPos = (document.body.getBoundingClientRect()).top;
 
