@@ -2,7 +2,7 @@ export function detectHeaderStatus(direction, section) {
 
     const header = document.querySelector('.header');
 
-    if(window.window > 1200) {
+    if(window.innerWidth > 1200) {
 
         /// toggle header position ///
         if (direction === 'down') {

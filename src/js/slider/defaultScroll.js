@@ -15,10 +15,6 @@ window.addEventListener('scroll', () => {
         header.classList.add('hidden');
     }
 
-    // if(window.scrollY === 0) {
-    //     header.classList.remove('hidden');
-    // }
-
     scrollPos = (document.body.getBoundingClientRect()).top;
 
 });

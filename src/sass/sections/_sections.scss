@@ -1,14 +1,8 @@
 .section{
   position: relative;
   transition: transform 1s ease, opacity 1s ease;
-  //padding: 0 30px;
-  //min-height: 100vh;
-  // space for next section //
-  //margin-bottom: 5px;
     &-box{
-      //min-height: calc(100vh - 60px);
       min-height: 100vh;
-      height: 100%;
       border-radius: 15px;
       padding: 130px 0;
       display: flex;
