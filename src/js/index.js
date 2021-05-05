@@ -8,8 +8,14 @@ import './common/formSubmit';
 import './common/modal';
 import './common/toggleMobileMenu';
 import './slider/defaultScroll';
+import {detectInnerPage} from "./common/detectInnerPage";
 
 /*
 Init slider transitions
  */
 initFullSlider();
+
+/*
+Detect inner page
+ */
+detectInnerPage();

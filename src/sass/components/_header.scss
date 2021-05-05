@@ -214,7 +214,9 @@
       }
     }
     @include m(1201){
-      transition: background-color 1.5s cubic-bezier(0.66, 0, 0.34, 1), top 1.5s cubic-bezier(0.66, 0, 0.34, 1), box-shadow .5s cubic-bezier(0.66, 0, 0.34, 1), color 1.5s cubic-bezier(0.66, 0, 0.34, 1);
+      &:not(.__inner){
+        transition: background-color 1.5s cubic-bezier(0.66, 0, 0.34, 1), top 1.5s cubic-bezier(0.66, 0, 0.34, 1), box-shadow .5s cubic-bezier(0.66, 0, 0.34, 1), color 1.5s cubic-bezier(0.66, 0, 0.34, 1);
+      }
     }
     @include d(1800){
       padding: 15px 0;

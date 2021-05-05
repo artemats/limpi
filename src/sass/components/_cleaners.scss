@@ -110,7 +110,7 @@
           cursor: pointer;
             .cleaners-box-loader{
               circle{
-                animation: progress 5s 1 ease-out;
+                animation: progress 5s 1 cubic-bezier(0.66, 0, 0.34, 1);
                 animation-fill-mode: both;
                 animation-play-state: paused;
               }
@@ -151,7 +151,7 @@
           opacity: 0;
           z-index: -1;
           //pointer-events: none;
-          transition: transform 1s cubic-bezier(0.66, 0, 0.34, 1), opacity .6s ease !important;
+          transition: transform 1s cubic-bezier(0.66, 0, 0.34, 1), opacity 1s cubic-bezier(0.66, 0, 0.34, 1) !important;
         }
         @include d(1440){
           max-width: 278px;
@@ -313,8 +313,11 @@
   0% {
     stroke-dashoffset: 527.788;
   }
-  100% {
+  92% {
     stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -527.788;
   }
 }
 

@@ -45,6 +45,9 @@
               width: 14px;
               height: 2px;
             }
+            @include d(1440){
+              top: 6px;
+            }
             @include d(600){
               right: 7px;
               top: 4px;

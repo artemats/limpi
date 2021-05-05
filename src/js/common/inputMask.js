@@ -9,11 +9,12 @@ phone.addEventListener('input', function (e) {
     let length = e.target.value.replace(/\s/g, '').replace(/[{()}]/g, '').length;
     if(length >= 9) {
         phone.classList.add('success');
-        phone.classList.remove('error');
+        // phone.classList.remove('error');
     } else {
         phone.classList.remove('success');
-        phone.classList.add('error');
+        // phone.classList.add('error');
     }
+    phone.classList.remove('error');
 });
 
 name.addEventListener('input', function (e) {

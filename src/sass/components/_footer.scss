@@ -108,10 +108,10 @@
             }
         }
         &-content{
-          min-height: 546px;
+          min-height: 574px;
           align-items: flex-end;
             @include d(1440){
-              min-height: 481px;
+              min-height: 502px;
             }
         }
         @include d(1440){
@@ -119,6 +119,7 @@
         }
         @include d(1200){
           background-color: var(--color-black-100);
+          margin-bottom: 10px;
         }
     }
     .illustration{
@@ -163,7 +164,7 @@
         }
       }
       &:nth-child(2){
-        padding-bottom: 97px;
+        padding-bottom: 82px;
           @include d(1440){
             max-width: 58%;
             padding-bottom: 83px;
@@ -213,6 +214,9 @@
           opacity: 1;
           transition-delay: 1s;
         }
+      }
+      a[href^=tel]{
+        pointer-events: none;
       }
     }
     @include d(1440){
