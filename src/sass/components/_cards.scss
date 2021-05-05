@@ -83,69 +83,78 @@
     }
     &:nth-child(1){
       .card-box-illustration{
-        width: 157px;
-        height: 210px;
-        bottom: -11px;
-        right: -10px;
+        width: 260px;
+        height: 308px;
+        top: 28px;
+        right: -30px;
           @include d(1440){
-            width: 150px;
-            height: 195px;
+            width: 230px;
+            height: 270px;
+            top: 23px;
+            right: -35px;
           }
           @include d(1200){
-            right: 5px;
+            width: 228px;
+            height: 266px;
+            top: 25px;
+            right: -20px;
           }
           @include d(600){
-            width: 116px;
-            height: 150px;
-            right: -10px;
+            width: 202px;
+            height: 228px;
+            top: 15px;
+            right: -26px;
           }
       }
     }
     &:nth-child(2){
       .card-box-illustration{
-        width: 166px;
-        height: 235px;
-        top: -28px;
-        right: -13px;
+        width: 270px;
+        height: 340px;
+        top: -120px;
+        right: -54px;
           @include d(1440){
-            width: 140px;
-            height: 208px;
-            top: -20px;
-            right: 1px;
+            width: 234px;
+            height: 316px;
+            top: -96px;
+            right: -46px;
           }
           @include d(1200){
-            top: -24px;
-            right: -16px;
+            width: 230px;
+            height: 312px;
+            top: -97px;
+            right: -50px;
           }
           @include d(600){
-            top: -15px;
-            right: -16px;
-            width: 115px;
-            height: 168px;
+            width: 176px;
+            height: 250px;
+            top: -79px;
+            right: -35px;
           }
       }
     }
     &:nth-child(3){
       .card-box-illustration{
-        width: 155px;
-        height: 157px;
-        top: 36px;
-        right: -31px;
+        width: 166px;
+        height: 176px;
+        top: 28px;
+        right: -34px;
           @include d(1440){
-            width: 135px;
-            height: 137px;
-            top: 39px;
-            right: -25px;
+            width: 150px;
+            height: 160px;
+            top: 27px;
+            right: -33px;
           }
           @include d(1200){
-            top: 62px;
-            right: -31px;
+            top: 52%;
+            right: -38px;
+            transform: translateY(-50%);
           }
           @include d(600){
-            width: 118px;
-            height: 120px;
-            top: 17px;
-            right: -24px;
+            top: 54%;
+            right: -26px;
+            width: 126px;
+            height: 136px;
           }
       }
     }

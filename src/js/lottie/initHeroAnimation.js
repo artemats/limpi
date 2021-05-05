@@ -20,14 +20,7 @@ export const initHeroAnimation = () => {
         });
 
         hero.addEventListener('data_ready', () => {
-           gsap.fromTo(box, {
-              opacity: 0,
-              scale: 0.5
-           }, {
-               opacity: 1,
-               scale: 1,
-               duration: 0.5
-           });
+            box.classList.add('is-visible');
         });
         box.classList.add('active');
     } else {

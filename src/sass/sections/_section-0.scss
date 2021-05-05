@@ -39,12 +39,25 @@
   }
   .illustration{
     position: relative;
-    max-width: 897px;
-    max-height: 558px;
-    right: -21.5%;
+    //max-width: 897px;
+    //max-height: 586px;
+    //right: -21.5%;
+    //top: -5px;
+    //width: 47vw;
+    //height: 31vw;
+    max-width: 920px;
+    max-height: 600px;
+    right: -24.5%;
     top: -5px;
-    width: 47vw;
-    height: 29vw;
+    width: 49vw;
+    height: 33vw;
+    transform: scale(.6);
+    opacity: 0;
+    transition: transform .7s cubic-bezier(0.42, 0, 0.32, 1.19), opacity .7s cubic-bezier(0.42, 0, 0.32, 1.19);
+      &.is-visible{
+        transform: scale(1);
+        opacity: 1;
+      }
       @include d(1900){
         right: -16.5%;
       }

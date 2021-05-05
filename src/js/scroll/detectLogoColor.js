@@ -1,6 +1,6 @@
 export function detectLogoColor(id) {
 
-    const colors = ['#FFFFFF', '#85E2FF', '#D5B4FF', '#FFB7D5', '#85E2FF', '#7AEFC5', '#0C4ADC', '#D5B4FF', '#313131'];
+    const colors = ['#FFFFFF', '#0C4ADC', '#6232E9', '#FF4387', '#0C4ADC', '#10C261', '#0C4ADC', '#0C4ADC', '#0C4ADC'];
 
     const star = document.querySelector('.logo-star');
 

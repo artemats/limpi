@@ -1,19 +1,21 @@
 .header{
   position: fixed;
-  top: 45px;
+  top: 40px;
   left: 45px;
   right: 45px;
   width: calc(100% - 90px);
   z-index: 3;
   color: var(--color-white);
   border-radius: 13px;
-  padding: 15px 10px 19px;
-  transition: background-color .4s ease, top .4s ease, box-shadow .4s ease;
+  padding: 20px 10px;
+  transition: background-color .4s ease, top .4s ease, box-shadow .4s ease, color .4s ease;
     &-panel{
       display: flex;
       justify-content: space-between;
       align-items: center;
         &-logo{
+          display: flex;
+          align-items: center;
             .logo{
                 &-letter,
                 &-star{
@@ -121,7 +123,7 @@
       color: var(--color-black);
         .logo{
             &-letter{
-              fill: var(--color-black);
+              fill: currentColor;
             }
             &-star{
               fill: var(--color-blue-100);
@@ -159,7 +161,7 @@
         }
     }
     &.hidden{
-      top: -94px;
+      top: -100px;
       box-shadow: none;
         @include d(1800){
           top: -90px;
@@ -205,6 +207,14 @@
         @include d(600){
           padding: 0 20px;
         }
+    }
+    .link-bold{
+      @include m(1201){
+        pointer-events: none;
+      }
+    }
+    @include m(1201){
+      transition: background-color 1.5s cubic-bezier(0.66, 0, 0.34, 1), top 1.5s cubic-bezier(0.66, 0, 0.34, 1), box-shadow .5s cubic-bezier(0.66, 0, 0.34, 1), color 1.5s cubic-bezier(0.66, 0, 0.34, 1);
     }
     @include d(1800){
       padding: 15px 0;

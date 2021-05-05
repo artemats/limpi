@@ -27,7 +27,7 @@ a[href^=tel]{
   margin: 0 auto;
     @include d(1800){
       max-width: 100%;
-      padding: 0 77px;
+      padding: 0 97px;
     }
     @include d(1200){
       padding: 0 50px;
@@ -42,7 +42,7 @@ a[href^=tel]{
   display: inline-block;
   width: 119px;
   height: 36px;
-  transition: color .2s ease;
+  //transition: color .2s ease;
   position: relative;
   z-index: 1;
     svg{

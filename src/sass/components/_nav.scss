@@ -91,25 +91,28 @@
     &-link{
       &.active{
         &[data-menuanchor="1"]{
-          color: var(--color-blue-200);
+          color: var(--color-blue);
         }
         &[data-menuanchor="2"]{
-          color: var(--color-purple-100);
+          color: var(--color-purple);
         }
         &[data-menuanchor="3"]{
-          color: var(--color-pink-100);
+          color: var(--color-pink);
         }
         &[data-menuanchor="4"]{
-          color: var(--color-blue-200);
+          color: var(--color-blue);
         }
         &[data-menuanchor="5"]{
-          color: var(--color-green);
+          color: #10C261;
         }
         &[data-menuanchor="6"]{
           color: var(--color-blue);
         }
         &[data-menuanchor="7"]{
-          color: var(--color-purple-100);
+          color: var(--color-blue);
+        }
+        &[data-menuanchor="8"]{
+          color: var(--color-blue);
         }
       }
     }

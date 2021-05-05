@@ -15,11 +15,12 @@ export function initFullSlider() {
         anchors:['0', '1', '2', '3', '4', '5', '6', '7', '8'],
         menu: '#nav',
         scrollOverflow: true,
-        scrollingSpeed: 1000,
+        scrollingSpeed: 1500,
         responsiveWidth: 1201,
         lockAnchors: true,
+        css3: true,
+        easingcss3: 'cubic-bezier(0.66, 0, 0.34, 1)',
         onLeave: (origin, destination, direction) => {
-            detectHeaderStatus(direction, destination.item);
             if(direction === 'down') {
                 hidePrevSections(parseInt(destination.item.getAttribute('data-anchor')));
             } else {
@@ -27,6 +28,7 @@ export function initFullSlider() {
             }
             detectSectionAction(destination.item.getAttribute('id'));
             detectLogoColor(destination.item.getAttribute('data-anchor'));
+            detectHeaderStatus(direction, destination.item);
             window.innerWidth <= 1200 ? closeMenu() : null;
         },
         afterLoad: (origin) => {

@@ -151,7 +151,7 @@
           opacity: 0;
           z-index: -1;
           //pointer-events: none;
-          transition: transform .6s ease-out, opacity .6s ease-out !important;
+          transition: transform 1s cubic-bezier(0.66, 0, 0.34, 1), opacity .6s ease !important;
         }
         @include d(1440){
           max-width: 278px;
