@@ -177,22 +177,20 @@
             background-color: var(--color-white);
           }
         }
-        @include hover(991){
-          &:hover{
-            color: var(--color-blue);
-              .link-btn-bg{
-                transform: scale3d(1.15,1.15,1);
-                  &:before{
-                    transition: transform .4s cubic-bezier(0.1, 0, 0.3, 1);
-                    transform: translate3d(-50%,-50%,0) scale3d(1,1,1);
-                  }
-                  &:after{
-                    opacity: 1;
-                    transition-duration: 0.01s;
-                    transition-delay: 0.3s;
-                  }
-              }
-          }
+        &:hover{
+          color: var(--color-blue);
+            .link-btn-bg{
+              transform: scale3d(1.15,1.15,1);
+                &:before{
+                  transition: transform .4s cubic-bezier(0.1, 0, 0.3, 1);
+                  transform: translate3d(-50%,-50%,0) scale3d(1,1,1);
+                }
+                &:after{
+                  opacity: 1;
+                  transition-duration: 0.01s;
+                  transition-delay: 0.3s;
+                }
+            }
         }
         @include d(1440){
           height: 58px;

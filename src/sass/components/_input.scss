@@ -80,6 +80,9 @@
       span{
         opacity: .8;
       }
+      @include d(1200){
+        text-align: left;
+      }
   }
 }
 

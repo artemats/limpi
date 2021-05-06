@@ -117,6 +117,12 @@
     }
     &-title{
       margin-bottom: 38px;
+        @include d(1200){
+          font-size: 36px;
+        }
+        @include d(600){
+          font-size: 28px;
+        }
     }
     &-form{
 
@@ -133,5 +139,10 @@
               width: 370px;
             }
         }
+    }
+    .form-detail{
+      @include d(1200){
+        font-size: 12px;
+      }
     }
 }

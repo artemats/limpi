@@ -245,6 +245,12 @@
           top: 30.6%;
           left: 6%;
         }
+        @include d(1200){
+          font-size: 22px;
+        }
+        @include d(600){
+          font-size: 19px;
+        }
     }
     @include d(1200){
       width: 540px;

@@ -47,8 +47,6 @@
     }
     @include d(600){
       justify-content: center;
-      border-top: 1px rgba(255,255,255,.1) solid;
-      margin-top: 5px;
-      padding-top: 40px;
+      padding-top: 5px;
     }
 }

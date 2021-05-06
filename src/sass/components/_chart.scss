@@ -98,6 +98,10 @@
           height: 70px;
         }
     }
+    @include d(600){
+      padding-bottom: 70px;
+      margin-bottom: 15px;
+    }
 }
 
 @keyframes wave {

@@ -160,9 +160,10 @@
           padding: 46px 15px 80px;
         }
         @include d(1200){
-          &:not(:last-child){
-            margin-right: 20px;
-          }
+          padding: 46px 25px 80px;
+            &:not(:last-child){
+              margin-right: 20px;
+            }
         }
     }
     &-dots{

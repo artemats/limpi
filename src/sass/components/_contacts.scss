@@ -42,12 +42,6 @@
     }
     .small{
       margin-bottom: 15px;
-        @include d(1200){
-          margin-bottom: 10px;
-        }
-        @include d(600){
-          margin-bottom: 15px;
-        }
     }
     @include d(1440){
       margin-bottom: 55px;
@@ -56,5 +50,6 @@
       flex-direction: column;
       text-align: center;
       align-items: center;
+      margin-bottom: 0;
     }
 }

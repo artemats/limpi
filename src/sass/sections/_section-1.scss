@@ -66,6 +66,9 @@
               height: auto;
               margin: -26px auto 0;
             }
+            @include d(600){
+              margin: -20px auto 0;
+            }
         }
       }
   }
