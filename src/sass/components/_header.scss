@@ -8,7 +8,7 @@
   color: var(--color-white);
   border-radius: 13px;
   padding: 20px 10px;
-  transition: background-color .4s ease, top .4s ease, box-shadow .4s ease, color .4s ease;
+  transition: background-color .4s ease, top .4s ease, box-shadow .4s ease, color .4s ease, padding .4s ease;
     &-panel{
       display: flex;
       justify-content: space-between;
@@ -88,7 +88,7 @@
               left: 0;
               width: 100%;
               height: 100%;
-              background-color: rgba(31,91,232,.8);
+              background-color: var(--color-blue);
               padding: 10px;
             }
             @include m(1201){
@@ -114,6 +114,9 @@
                 display: none;
               }
             }
+        }
+        @include d(1200){
+          min-height: 46px;
         }
     }
     &.smart{
@@ -158,6 +161,10 @@
         }
         @include d(600){
           top: 10px;
+          padding: 5px 0;
+            .container{
+              padding: 0 15px;
+            }
         }
     }
     &.hidden{
@@ -204,6 +211,9 @@
         @include d(1800){
           padding: 0 25px;
         }
+        @include d(1200){
+          padding: 0 40px;
+        }
         @include d(600){
           padding: 0 20px;
         }
@@ -233,12 +243,13 @@
       left: 20px;
       right: 20px;
       width: calc(100% - 40px);
+      min-height: 56px;
     }
     @include d(600){
       left: 15px;
       right: 15px;
       top: 15px;
       width: calc(100% - 30px);
-      padding: 5px 0;
+      padding: 10px 0;
     }
 }

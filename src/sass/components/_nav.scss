@@ -3,9 +3,10 @@
   align-items: center;
     .link{
       &-btn{
-        @include m(601){
-          display: none;
-        }
+        margin-top: 20px;
+          @include m(601){
+            display: none;
+          }
       }
       &:not(:last-child){
         margin-right: 45px;
@@ -26,12 +27,18 @@
           }
       }
       @include d(600){
+        font-size: 25px;
+          &:not(:last-child){
+            margin-bottom: 40px;
+          }
+      }
+      @include d(480){
         &:not(:last-child){
-          margin-bottom: 40px;
+          margin-bottom: 4.6vh;
         }
       }
-      @include d(600){
-        font-size: 25px;
+      @include d(370){
+        font-size: 22px;
       }
     }
     &.shadows{
@@ -87,6 +94,9 @@
     }
     @include d(600){
       padding: 120px 30px;
+    }
+    @include d(480){
+      padding: 100px 30px;
     }
     &-link{
       &.active{

@@ -13,7 +13,6 @@ burger.addEventListener('click', function () {
 });
 
 export function openMenu() {
-    console.log('open');
     burger.classList.add('active');
     header.classList.add('is-open-menu');
     gsap.to(navWrap, {
@@ -22,7 +21,7 @@ export function openMenu() {
        onComplete: () => {
            navWrap.style.opacity = 1;
            gsap.to(nav, {
-              duration: 1,
+              duration: 0.5,
               width: ( window.innerWidth - 20 ),
               height: ( window.innerHeight - 20 ),
                onComplete: () => {
@@ -34,7 +33,7 @@ export function openMenu() {
                        duration: 1,
                        opacity: 1,
                        y: 0,
-                       stagger: 0.1,
+                       // stagger: 0.1,
                        ease: Bounce.easeOut
                    });
                }
@@ -48,18 +47,18 @@ export function closeMenu() {
         opacity: 1,
         y: 0
     },{
-        duration: 0.5,
+        duration: 0.3,
         opacity: 0,
         y: 30,
-        stagger: 0.1,
+        // stagger: 0.1,
         onComplete: () => {
             gsap.to(navWrap, {
-                duration: 0.2,
+                duration: 0.1,
                 opacity: 0,
                 onComplete: () => {
                     nav.classList.remove('shadows');
                     gsap.to(nav, {
-                        duration: 0.2,
+                        duration: 0.1,
                         width: 0,
                         height: 0,
                     });

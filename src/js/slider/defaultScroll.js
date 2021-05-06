@@ -1,3 +1,5 @@
+import {closeMenu} from "../common/toggleMobileMenu";
+
 const header = document.querySelector('.header');
 let scrollPos = 0;
 
@@ -16,5 +18,7 @@ window.addEventListener('scroll', () => {
     }
 
     scrollPos = (document.body.getBoundingClientRect()).top;
+
+    // closeMenu();
 
 });

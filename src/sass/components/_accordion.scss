@@ -12,8 +12,10 @@
         }
         &-content{
           font-size: 18px;
-          padding-top: 20px;
-          display: none;
+          //padding-top: 20px;
+          overflow: hidden;
+          transition: padding-top .4s ease, height .4s ease;
+          //display: none;
             p, li{
               font-size: inherit;
             }
@@ -52,11 +54,19 @@
               right: 7px;
               top: 4px;
             }
+            @include hover(1200){
+              &:hover{
+                .accordion-btn-bg{
+                  transform: scale(3);
+                }
+              }
+            }
         }
         &.open{
           .accordion-box{
             &-content{
               display: block;
+              padding-top: 20px;
             }
             &-btn{
               &:before{
@@ -67,6 +77,20 @@
         }
         @include d(600){
           padding: 22px 0 21px;
+        }
+    }
+    &-btn{
+        &-bg{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          background-color: var(--color-white);
+          opacity: 0.1;
+          transform: scale(0);
+          transition: transform 0.4s ease;
         }
     }
     @include d(1440){

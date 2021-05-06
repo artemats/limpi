@@ -26,7 +26,8 @@
               margin-left: 15px;
             }
             a{
-              display: inherit;
+              display: inline-flex;
+              align-items: center;
             }
             @include d(1300){
               font-size: 12px;

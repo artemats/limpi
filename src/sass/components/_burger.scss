@@ -1,7 +1,9 @@
 .burger{
   position: relative;
   padding: 5px;
+  //margin: -5px -5px -9px;
   margin: -5px;
+  height: 26px;
   z-index: 1;
     &-box{
       width: 34px;
@@ -32,7 +34,7 @@
         background-color: var(--color-blue);
           &:nth-child(1){
             transform: rotate(45deg);
-            top: 5px;
+            top: 6px;
           }
           &:nth-child(2){
             transform: rotate(-45deg);
