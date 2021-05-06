@@ -5,13 +5,14 @@ export function initPricesCarousel() {
         new Splide('#prices', {
             // type: 'loop',
             // perPage: 1,
-            trimSpace: false,
+            // trimSpace: false,
             autoWidth: true,
             rewind: true,
-            // focus: 'center',
+            focus: false,
             arrows: false,
             speed: 600,
-            start: 1
+            start: 1,
+            direction: 'rtl'
         }).mount();
     }
 }

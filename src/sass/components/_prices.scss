@@ -114,7 +114,9 @@
     }
     .splide{
       &__list {
-        flex-direction: row-reverse;
+        @include m(601){
+          flex-direction: row-reverse;
+        }
       }
       &__pagination{
         margin-top: 15px;
