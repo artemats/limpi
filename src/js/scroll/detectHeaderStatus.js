@@ -1,11 +1,11 @@
-export function detectHeaderStatus(direction, section) {
+export function detectHeaderStatus(direction, section, reverse = false) {
 
     const header = document.querySelector('.header');
 
     if(window.innerWidth > 1200) {
 
         /// toggle header position ///
-        if (direction === 'down') {
+        if (direction === (reverse ? 'up' : 'down' )) {
             header.classList.add('hidden');
         } else {
             header.classList.remove('hidden');

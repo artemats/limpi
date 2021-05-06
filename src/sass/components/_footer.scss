@@ -65,7 +65,7 @@
     &-title{
       margin-bottom: 72px;
       opacity: 0;
-      transition: opacity .4s ease;
+      // transition: opacity .4s ease;
         @include d(1440){
           margin-bottom: 20px;
         }
@@ -180,7 +180,7 @@
           }
       }
     }
-    &:before{
+    &:before, .before{
       content: '';
       position: absolute;
       top: 0;
@@ -207,12 +207,12 @@
       &.in-viewport,
       &.active{
         &:before{
-          transition-delay: 1s;
+          // transition-delay: 1s;
           opacity: 1;
         }
         .footer-title{
           opacity: 1;
-          transition-delay: 1s;
+          // transition-delay: 1s;
         }
       }
       a[href^=tel]{
