@@ -26,9 +26,7 @@ const initScroll = () => {
         speed: 0.2,
         onlyScrollIfNeeded: 1,
     });
-    // remove xAxis
-    window.scrollbar.track.xAxis.element.remove();
-
+    
     window.CustomFixed = new CustomFixed();
 
     // add scroll listener

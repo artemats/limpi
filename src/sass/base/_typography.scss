@@ -5,7 +5,7 @@ h1{
     @include d(1600){
       font-size: 68px;
     }
-    @include d(1440){
+    @include d(1441){
       font-size: 66px;
     }
     @include d(1400){
@@ -23,7 +23,7 @@ h2{
   font-size: 56px;
   font-family: var(--font-title);
   line-height: 1.3em;
-    @include d(1440){
+    @include d(1441){
       font-size: 50px;
     }
     @include d(1200){
@@ -38,7 +38,7 @@ h3{
   font-size: 44px;
   font-family: var(--font-title);
   line-height: 1.3em;
-    @include d(1440){
+    @include d(1441){
       font-size: 38px;
     }
     @include d(1200){
@@ -65,7 +65,7 @@ h5{
   font-size: 28px;
   font-family: var(--font-title);
   line-height: 1.3em;
-    @include d(1440){
+    @include d(1441){
       font-size: 22px;
     }
     @include d(600){
@@ -78,7 +78,7 @@ p, li{
   line-height: 1.6em;
   font-family: inherit;
   color: inherit;
-    @include d(1440){
+    @include d(1441){
       font-size: 20px;
     }
     @include d(1200){

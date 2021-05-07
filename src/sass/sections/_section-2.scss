@@ -8,7 +8,7 @@
     }
     &-accent{
       margin: -5px 72px 165px auto;
-        @include d(1440){
+        @include d(1441){
           margin: 10px 48px 125px auto;
         }
         @include d(1200){
@@ -37,7 +37,7 @@
   .content-column{
     &:nth-child(1){
       padding-bottom: 50px;
-        @include d(1440){
+        @include d(1441){
           padding-top: 25px;
           padding-bottom: 0;
         }
@@ -60,7 +60,7 @@
         max-width: 530px;
         width: 35vw;
       }
-      @include d(1440){
+      @include d(1441){
         max-width: 423px;
         max-height: 280px;
         width: 29.5vw;

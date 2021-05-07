@@ -15,7 +15,7 @@
           border-radius: 20px 20px 0 0;
           background-color: #FFE4F4;
           margin-bottom: 62px;
-            @include d(1440){
+            @include d(1441){
               height: 82px;
               margin-bottom: 45px;
             }
@@ -25,14 +25,14 @@
         }
         &-title{
           padding: 0 20px 5px;
-            @include d(1440){
+            @include d(1441){
               padding: 0 20px 2px;
             }
         }
         &-subtitle{
           padding: 0 20px;
           font-size: 16px;
-            @include d(1440){
+            @include d(1441){
               font-size: 14px;
             }
         }
@@ -46,7 +46,7 @@
           width: 163px;
           height: 163px;
           margin: 20px auto 48px;
-            @include d(1440){
+            @include d(1441){
               width: 143px;
               height: 143px;
               margin: 18px auto 40px;
@@ -86,13 +86,13 @@
             width: 118%;
             left: -43px;
             top: -52px;
-              @include d(1440){
+              @include d(1441){
                 left: -25px;
                 top: -27px;
               }
           }
         }
-        @include d(1440){
+        @include d(1441){
           padding: 0 0 60px;
           margin: 0 10px;
         }
@@ -108,7 +108,7 @@
         &-currency{
           font-size: 14px;
         }
-      @include d(1440){
+      @include d(1441){
         font-size: 48px;
       }
     }
@@ -133,7 +133,7 @@
           width: 100%;
         }
     }
-    @include d(1440){
+    @include d(1441){
       padding: 15px;
     }
     @include d(1200){

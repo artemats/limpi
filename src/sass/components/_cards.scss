@@ -5,7 +5,7 @@
     @include d(1600){
       margin: 68px -15px 70px;
     }
-    @include d(1440){
+    @include d(1441){
       margin: 45px -15px 60px;
     }
     @include d(1200){
@@ -45,7 +45,7 @@
           overflow: hidden;
           max-width: 300px;
           padding-right: 25px;
-            @include d(1440){
+            @include d(1441){
               max-width: 260px;
               font-size: 26px;
             }
@@ -69,7 +69,7 @@
               height: 100%;
             }
         }
-        @include d(1440){
+        @include d(1441){
           height: 212px;
           padding: 35px;
         }
@@ -87,7 +87,7 @@
         height: 308px;
         top: 28px;
         right: -30px;
-          @include d(1440){
+          @include d(1441){
             width: 230px;
             height: 270px;
             top: 23px;
@@ -113,7 +113,7 @@
         height: 340px;
         top: -120px;
         right: -54px;
-          @include d(1440){
+          @include d(1441){
             width: 234px;
             height: 316px;
             top: -96px;
@@ -139,7 +139,7 @@
         height: 176px;
         top: 28px;
         right: -34px;
-          @include d(1440){
+          @include d(1441){
             width: 150px;
             height: 160px;
             top: 27px;

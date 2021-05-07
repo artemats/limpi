@@ -16,7 +16,7 @@
             background-color: var(--color-blue-200);
             transform: translateY(-50%) rotate(45deg);
           }
-          @include d(1440){
+          @include d(1441){
             right: 20px;
           }
           @include d(1200){
@@ -49,7 +49,7 @@
           @include d(1600){
             margin-right: 100px;
           }
-          @include d(1440){
+          @include d(1441){
             margin-right: 90px;
           }
           @include d(1400){
@@ -104,7 +104,7 @@
           @include d(1600){
             margin-left: 100px;
           }
-          @include d(1440){
+          @include d(1441){
             margin-left: 90px;
           }
           @include d(1400){
@@ -157,7 +157,7 @@
               }
           }
       }
-      @include d(1440){
+      @include d(1441){
         min-height: calc(100vh - 220px);
         padding-top: 20px;
       }
@@ -174,7 +174,7 @@
     bottom: -132px;
     left: 50%;
     transform: translateX(-50%);
-      @include d(1440){
+      @include d(1441){
         bottom: -110px;
       }
   }

@@ -11,7 +11,7 @@
       left: 30px;
       background-color: var(--color-blue-200);
       border-radius: 15px;
-        @include d(1440){
+        @include d(1441){
           top: 20px;
           right: 20px;
           left: 20px;
@@ -43,7 +43,7 @@
         p{
           margin-top: 20px;
         }
-        @include d(1440){
+        @include d(1441){
           max-width: 800px;
         }
     }
@@ -52,7 +52,7 @@
         padding: 0 30px;
       }
     }
-    @include d(1440){
+    @include d(1441){
       padding-bottom: 136px;
       padding-top: 162px;
     }

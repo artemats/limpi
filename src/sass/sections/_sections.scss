@@ -19,7 +19,7 @@
           bottom: 30px;
           border-radius: 15px;
           pointer-events: none;
-            @include d(1440){
+            @include d(1441){
               top: 20px;
               left: 20px;
               right: 20px;
@@ -42,7 +42,7 @@
         &-subcontent{
           padding-top: 90px;
           padding-bottom: 5px;
-            @include d(1440){
+            @include d(1441){
               padding-top: 70px;
             }
             @include d(1200){
@@ -59,13 +59,13 @@
           right: 30px;
           top: 30px;
           bottom: 30px;
-            @include d(1440){
+            @include d(1441){
               right: 20px;
               top: 20px;
               bottom: 20px;
             }
         }
-        @include d(1440){
+        @include d(1441){
           //min-height: calc(100vh - 40px);
           padding: 110px 0;
         }
@@ -82,13 +82,13 @@
       line-height: 1.45em;
       text-transform: uppercase;
       margin-bottom: 20px;
-        @include d(1440){
+        @include d(1441){
           font-size: 15px;
         }
     }
     &-title{
       margin-bottom: 30px;
-        @include d(1440){
+        @include d(1441){
           margin-bottom: 20px;
         }
         @include d(1200){
@@ -103,7 +103,7 @@
         @include d(1600){
           font-size: 24px;
         }
-        @include d(1440){
+        @include d(1441){
           font-size: 22px;
         }
         @include d(1400){
@@ -133,7 +133,7 @@
                   background-size: contain;
                   background-position: center;
                   background-image: url(../images/icons/star.svg);
-                    @include d(1440){
+                    @include d(1441){
                       top: 7px;
                     }
                     @include d(600){
@@ -143,7 +143,7 @@
                 }
                 &:not(:last-child){
                   margin-bottom: 36px;
-                    @include d(1440){
+                    @include d(1441){
                       margin-bottom: 32px;
                     }
                 }
@@ -155,7 +155,7 @@
                   padding-left: 30px;
                 }
             }
-            @include d(1440){
+            @include d(1441){
               padding-top: 18px;
             }
             @include d(1200){
@@ -191,7 +191,7 @@
           width: 480px;
           height: 480px;
         }
-        @include d(1440){
+        @include d(1441){
           width: 410px;
           height: 410px;
           padding: 37px 50px 67px;
@@ -222,7 +222,7 @@
       opacity: .2;
       border-radius: 50%;
       pointer-events: none;
-        @include d(1440){
+        @include d(1441){
           width: 1069px;
           height: 1069px;
           transform: translate(35%, -54%);
@@ -239,14 +239,14 @@
     }
     & > .fp-tableCell{
       //padding: 30px 0;
-      //  @include d(1440){
+      //  @include d(1441){
       //    padding: 20px 0;
       //  }
       //  @include d(1200){
       //    padding: 0;
       //  }
     }
-    @include d(1440){
+    @include d(1441){
       //padding: 0 20px;
     }
     @include d(1200){

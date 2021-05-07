@@ -94,7 +94,7 @@
         path{
           fill: var(--color-purple);
         }
-        @include d(1440){
+        @include d(1441){
           top: -53px;
           width: 26px;
           height: 23px;
@@ -110,7 +110,7 @@
           height: 17px;
         }
     }
-    @include d(1440){
+    @include d(1441){
       font-size: 28px;
     }
     @include d(1200){

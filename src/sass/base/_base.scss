@@ -302,3 +302,8 @@ table{
 .scrollbar-thumb {
   background: var(--color-black-100)!important;
 }
+
+.scroll-content #full-slider{
+  overflow: hidden;
+  width: 100vw;
+}

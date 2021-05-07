@@ -49,7 +49,7 @@
               margin-bottom: 25px;
             }
         }
-        @include d(1440){
+        @include d(1441){
           max-width: 58%;
         }
         @include d(1300){
@@ -69,7 +69,7 @@
       margin-bottom: 72px;
       opacity: 0;
       // transition: opacity .4s ease;
-        @include d(1440){
+        @include d(1441){
           margin-bottom: 20px;
         }
         @include d(1200){
@@ -79,7 +79,7 @@
     &.section{
       margin-bottom: 0;
       //padding: 0 0 30px;
-      //  @include d(1440){
+      //  @include d(1441){
       //    padding: 0 0 20px;
       //  }
       //  @include d(1200){
@@ -101,7 +101,7 @@
           left: 30px;
           border-radius: 15px;
           background-color: var(--color-black-100);
-            @include d(1440){
+            @include d(1441){
               top: 20px;
               right: 20px;
               left: 20px;
@@ -113,11 +113,11 @@
         &-content{
           min-height: 574px;
           align-items: flex-end;
-            @include d(1440){
+            @include d(1441){
               min-height: 502px;
             }
         }
-        @include d(1440){
+        @include d(1441){
           margin-bottom: 20px;
         }
         @include d(1200){
@@ -136,7 +136,7 @@
       flex-direction: column;
       justify-content: flex-end;
       margin-bottom: -2px;
-        @include d(1440){
+        @include d(1441){
           max-width: 596px;
           max-height: 417px;
           width: 42vw;
@@ -158,7 +158,7 @@
     }
     .content-column{
       &:nth-child(1){
-        @include d(1440){
+        @include d(1441){
           max-width: 42%;
         }
         @include d(1200){
@@ -168,7 +168,7 @@
       }
       &:nth-child(2){
         padding-bottom: 82px;
-          @include d(1440){
+          @include d(1441){
             max-width: 58%;
             padding-bottom: 83px;
           }
@@ -183,7 +183,7 @@
           }
       }
     }
-    &:before, .before{
+    .before{
       content: '';
       position: absolute;
       top: 0;
@@ -222,7 +222,7 @@
         pointer-events: none;
       }
     }
-    @include d(1440){
+    @include d(1441){
       //margin: 10px 20px 0;
     }
     @include d(1200){

@@ -5,7 +5,7 @@
     &-subtitle,
     &-description{
       max-width: 540px;
-        @include d(1440){
+        @include d(1441){
           max-width: 480px;
         }
         @include d(1300){

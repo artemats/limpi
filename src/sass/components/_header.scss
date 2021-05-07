@@ -102,7 +102,7 @@
           justify-content: flex-end;
             .languages{
               margin-right: 28px;
-                @include d(1440){
+                @include d(1441){
                   margin-right: 18px;
                 }
                 @include d(1200){
@@ -147,7 +147,7 @@
             }
           }
         }
-        @include d(1440){
+        @include d(1441){
           top: 35px;
         }
         @include d(1200){
@@ -166,7 +166,7 @@
         @include d(1800){
           top: -90px;
         }
-        @include d(1440){
+        @include d(1441){
           top: -72px;
         }
         @include d(1200){
@@ -221,7 +221,7 @@
     @include d(1800){
       padding: 15px 0;
     }
-    @include d(1440){
+    @include d(1441){
       padding: 11px 0;
       left: 35px;
       right: 35px;
