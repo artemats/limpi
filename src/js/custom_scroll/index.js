@@ -56,5 +56,5 @@ const initScroll = () => {
 
 
 export function initCustomScroll() {
-    window.mobileDevice ? initFullSlider() : initScroll();
+    window.mobileDevice || window.innerWidth <= 1200 ? initFullSlider() : initScroll();
 }
