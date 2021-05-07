@@ -10,7 +10,7 @@ export function switchHobbies() {
     }, 1000);
 
     function fadeInFadeout() {
-        if(counter >= ( hobbies.length - 1 )) {
+        if (counter >= (hobbies.length - 1)) {
             counter = 0;
             last = (hobbies.length - 1);
         } else {
@@ -20,12 +20,11 @@ export function switchHobbies() {
         hobbies[counter].classList.add('show');
         last !== -1 ? hobbies[last].classList.remove('show') : null;
     }
-
 }
 
 export function stopHobbiesSwitcher() {
     clearInterval(switcher);
-    for(let i = 0; i < hobbies.length; i++) {
+    for (let i = 0; i < hobbies.length; i++) {
         hobbies[i].classList.remove('show');
     }
 }

@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
 .idea
 .vscode
 
->>>>>>> 09b415d22458b947a2ee50d0f1ba9e595f2aa486
 # Logs
 logs
 *.log
@@ -73,3 +70,6 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+*.rar
+*.zip

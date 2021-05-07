@@ -63,7 +63,7 @@ export default class CustomFixed {
             this.nav.push({ el: element, index })
             element.addEventListener('click', (e) => {
                 e.preventDefault();
-                const top = this.divs.find(({ anchor }) => anchor == index).top + this.windowHeight * 0.05;
+                const top = this.divs.find(({ anchor }) => anchor == index).top;
                 window.scrollbar.scrollTo(0, top, 2000)
             })
         });
@@ -86,18 +86,23 @@ export default class CustomFixed {
                 id, height, el: element, top: offset,
                 anchor: index,
                 prevFade: false,
-                prevVisible: false,
-                set visible(value) {
-                    if (value && value != obj.prevVisible) detectSectionAction(obj.id)
-                    obj.prevVisible = value;
+                visible: false,
+                set setVisible(value) {
+                    if (value != this.visible) {
+                        this.visible = value;
+                        if (value) {
+                            thise.activeSection = index;
+                            detectSectionAction(this.id);
+                            thise.checkNav();
+                            detectLogoColor(thise.activeSection)
+                        }
+                    }
                 },
                 set fade(value) {
-                    if (value != obj.prevFade) {
-                        detectLogoColor(thise.activeSection)
+                    if (value != this.prevFade) {
                         if (thise.activeSection == 0) detectHeaderStatus('up', thise.divs[0].el)
-                        thise.checkNav();
                     }
-                    obj.prevFade = value;
+                    this.prevFade = value;
                 }
             }
             obj.fade = false;
@@ -136,9 +141,10 @@ export default class CustomFixed {
             progress > 2 ? progress = 2 : '';
             progressTop > 4 ? progressTop = 4 : '';
 
-            const percentHeight = this.windowHeight * 0.05;
-            if (tickTop >= top - percentHeight && tickTop < top + height) {
-                this.activeSection = anchor;
+            if (progress > 0.3 && progress <= 1.3) {
+                el.classList.add('active');
+            } else {
+                el.classList.remove('active');
             }
 
             this.callback(el, id, progress, progressTop, progressTopHalf);
@@ -183,7 +189,9 @@ export default class CustomFixed {
         }
         const currentDiv = this.divs.find(({ id: divID }) => divID == id);
 
-        currentDiv.visible = progressTop > 0.2;
+        const visible = progressTop > 0.2 && progressTop < 1.3;
+
+        currentDiv.setVisible = visible
         currentDiv.fade = progressTop > 0.95;
 
         switch (id) {
