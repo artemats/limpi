@@ -85,7 +85,6 @@ export default class CustomFixed {
             const obj = {
                 id, height, el: element, top: offset,
                 anchor: index,
-                prevFade: false,
                 visible: false,
                 set setVisible(value) {
                     if (value != this.visible) {
@@ -95,17 +94,11 @@ export default class CustomFixed {
                             detectSectionAction(this.id);
                             thise.checkNav();
                             detectLogoColor(thise.activeSection)
+                            if (thise.activeSection == 0) detectHeaderStatus('up', thise.divs[0].el)
                         }
                     }
                 },
-                set fade(value) {
-                    if (value != this.prevFade) {
-                        if (thise.activeSection == 0) detectHeaderStatus('up', thise.divs[0].el)
-                    }
-                    this.prevFade = value;
-                }
             }
-            obj.fade = false;
             this.divs.push(obj)
             // feat for footer
             if (id == 'section-8') {
@@ -115,7 +108,6 @@ export default class CustomFixed {
 
 
         });
-        this.list[0].fade = true;
         if (setPosition) this.tick(window.scrollbar.offset.y);
     };
 
@@ -187,12 +179,9 @@ export default class CustomFixed {
                 this.tweenList[id].out.progress(progress - 1);
             }
         }
+
         const currentDiv = this.divs.find(({ id: divID }) => divID == id);
-
-        const visible = progressTop > 0.2 && progressTop < 1.3;
-
-        currentDiv.setVisible = visible
-        currentDiv.fade = progressTop > 0.95;
+        currentDiv.setVisible = progressTop > 0.2 && progressTop < 1.3;
 
         switch (id) {
             case 'section-8':
