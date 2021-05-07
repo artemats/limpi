@@ -8,6 +8,7 @@
       margin-bottom: 17px;
       position: absolute;
       opacity: 0;
+      transform-origin: right top;
         &:before{
           content: '';
           position: absolute;
@@ -50,8 +51,8 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          opacity: 1;
-          transition: opacity .2s ease;
+          opacity: 0;
+          transition: opacity .4s ease;
             img{
               max-width: 70%;
             }
@@ -65,8 +66,8 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          opacity: 0;
-          transition: opacity .2s ease;
+          opacity: 1;
+          transition: opacity .4s ease;
         }
         .dot{
           display: inline-block;
@@ -74,7 +75,7 @@
           height: 10px;
           border-radius: 50%;
           margin: 0 3px;
-          background: var(--color-black);
+          background: var(--color-blue);
         }
         &.active{
           .chart-status-logo{
@@ -84,13 +85,21 @@
             opacity: 1;
           }
           .dot{
-            animation: wave 1s linear infinite;
+            animation: wave .8s ease-out infinite;
             &:nth-child(2) {
-              animation-delay: -0.8s;
-            }
-            &:nth-child(3) {
               animation-delay: -0.6s;
             }
+            &:nth-child(3) {
+              animation-delay: -0.4s;
+            }
+          }
+        }
+        &.finished{
+          .dots{
+            opacity: 0;
+          }
+          .chart-status-logo{
+            opacity: 1;
           }
         }
         @include d(600){
@@ -110,6 +119,6 @@
   }
 
   30% {
-    transform: translateY(-15px);
+    transform: translateY(-8px);
   }
 }
