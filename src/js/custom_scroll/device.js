@@ -132,7 +132,7 @@ const func = function () {
     device.television = function () {
         var i, tvString;
 
-        television = [
+        var television = [
             "googletv",
             "viera",
             "smarttv",
