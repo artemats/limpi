@@ -25,6 +25,7 @@ export default class CustomFixed {
 
         window.addEventListener('resize', () => {
             clearTimeout(this.timer);
+            this.windowHeight = window.innerHeight;
             this.timer = setTimeout(() => { this.update() }, 250);
             if (this.footer) this.footer.el.style.height = this.windowHeight + 'px';
         })
