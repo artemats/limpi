@@ -102,15 +102,17 @@
   }
   .content-column{
     &:nth-child(1){
+      transition: opacity 1s cubic-bezier(0.68, -0.64, 0.27, 1.64);
+      transition-delay: 0.5s;
       @include d(1440){
-        padding-top: 15px;
-      }
-      @include d(1200){
-        padding-top: 72px;
-      }
-      @include d(600){
-        padding-top: 62px;
-      }
+          padding-top: 15px;
+        }
+        @include d(1200){
+          padding-top: 72px;
+        }
+        @include d(600){
+          padding-top: 62px;
+        }
     }
   }
 }
