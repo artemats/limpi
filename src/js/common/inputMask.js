@@ -9,17 +9,17 @@ phone.addEventListener('input', function (e) {
     let length = e.target.value.replace(/\s/g, '').replace(/[{()}]/g, '').length;
     if(length >= 9) {
         phone.classList.add('success');
-        // phone.classList.remove('error');
     } else {
         phone.classList.remove('success');
-        // phone.classList.add('error');
     }
     phone.classList.remove('error');
 });
 
 name.addEventListener('input', function (e) {
-    if(/^\d+$/g.test(e.target.value)) {
+    if(/\d+/g.test(e.target.value)) {
         name.classList.add('error');
+        let error = name.parentElement.querySelector('.input-label-error');
+        error.innerHTML = error.getAttribute('data-input');
     } else {
         name.classList.remove('error');
         name.classList.add('success');
@@ -41,8 +41,14 @@ function hasEmptyFields() {
     for(let i = 0; i < inputs.length; i++) {
         if(inputs[i].value === '') {
             inputs[i].classList.add('error');
+            let error = inputs[i].parentElement.querySelector('.input-label-error');
+            error.innerHTML = error.getAttribute('data-submit');
         } else if(phone.value.length < 14) {
             phone.classList.add('error');
+        } else if(/\d+/g.test(name.value)) {
+            name.classList.add('error');
+            let error = name.parentElement.querySelector('.input-label-error');
+            error.innerHTML = error.getAttribute('data-input');
         } else {
             inputs[i].classList.remove('error');
         }

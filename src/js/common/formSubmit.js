@@ -1,5 +1,5 @@
 import gsap from 'gsap';
-import {hasEmptyFields, isValidForm} from "./inputMask";
+import {isValidForm} from "./inputMask";
 
 document.querySelector('#order-form').addEventListener('submit', function (e) {
     e.preventDefault();

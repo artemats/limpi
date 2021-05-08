@@ -2,7 +2,6 @@ import gsap from "gsap/gsap-core";
 import {showForm} from "./formSubmit";
 
 export function openModal(modal) {
-    console.log('open modal - ', modal);
     const modalBox = document.getElementById(modal);
     gsap.to(modalBox,{
        display: 'block',
