@@ -7,7 +7,7 @@
       max-width: 500px;
     }
     &-description{
-      @include d(1440){
+      @include d(1441){
         max-width: 415px;
       }
       @include d(1200){

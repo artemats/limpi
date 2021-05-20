@@ -2,11 +2,18 @@
   .section{
     &-title{
       max-width: 630px;
-        @include d(1440){
-          max-width: 560px;
+        @include d(1441){
+          max-width: 630px;
+        }
+        @include d(732){
+          max-width: 520px;
         }
         @include d(1200){
           margin: 0 auto 31px;
+        }
+        @include d(542){
+          max-width: 390px;
+          margin-left: 0;
         }
     }
     &-description{

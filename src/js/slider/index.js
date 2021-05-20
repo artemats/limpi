@@ -20,6 +20,7 @@ export function initFullSlider() {
         lockAnchors: true,
         css3: true,
         easingcss3: 'cubic-bezier(0.66, 0, 0.34, 1)',
+        fitToSectionDelay: 2000,
         onLeave: (origin, destination, direction) => {
             if(direction === 'down') {
                 hidePrevSections(parseInt(destination.item.getAttribute('data-anchor')));

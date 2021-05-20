@@ -41,10 +41,20 @@
             .link-btn{
               width: 100%;
               margin-top: 28px;
+                @include d(1441){
+                  margin-top: 8px;
+                }
+                @include d(1200){
+                  margin-top: 12px;
+                }
             }
-            @include d(1440){
+            @include d(1441){
               max-width: 450px;
-              padding: 90px 60px 85px;
+              padding: 90px 60px 80px;
+              min-height: 543px;
+            }
+            @include d(1200){
+              min-height: 498px;
             }
             @include d(768){
               max-width: 390px;
@@ -99,6 +109,10 @@
               fill: currentColor;
             }
         }
+        @include d(600){
+          top: 16px;
+          right: 14px;
+        }
         @include hover(991){
           &:hover{
             &:before{
@@ -117,11 +131,16 @@
     }
     &-title{
       margin-bottom: 38px;
+        @include d(1441){
+          margin-bottom: 26px;
+        }
         @include d(1200){
           font-size: 36px;
+          margin-bottom: 20px;
         }
         @include d(600){
           font-size: 28px;
+          margin-bottom: 22px;
         }
     }
     &-form{

@@ -93,10 +93,8 @@
       margin-left: auto;
     }
     @include d(600){
-      padding: 120px 30px;
-    }
-    @include d(480){
-      padding: 100px 30px;
+      padding: 17vh 30px;
+      justify-content: flex-start;
     }
     &-link{
       &.active{

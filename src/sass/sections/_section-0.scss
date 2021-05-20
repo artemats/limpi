@@ -36,10 +36,14 @@
           padding-bottom: 1px;
         }
     }
-    &-title,
-    &-subtitle,
-    &-action{
+    &-title{
       transition: opacity cubic-bezier(0.68, -0.98, 0.27, 1.98) 1s, transform cubic-bezier(0.68, -0.98, 0.27, 1.98) 1s;
+    }
+    &-subtitle{
+      transition: opacity cubic-bezier(0.68, -0.64, 0.27, 1.64) 1s, transform cubic-bezier(0.68, -0.64, 0.27, 1.64) 1s;
+    }
+    &-action{
+      transition: opacity cubic-bezier(0.68, -0.64, 0.27, 1.64) 1s, transform cubic-bezier(0.68, -0.64, 0.27, 1.64) 1s;
     }
     &-title{
       transition-delay: .2s;

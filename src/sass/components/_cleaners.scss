@@ -30,7 +30,7 @@
               object-fit: cover;
               object-position: center;
             }
-            @include d(1440){
+            @include d(1441){
               width: 144px;
               height: 144px;
               margin: 0 auto 32px;
@@ -151,9 +151,10 @@
           opacity: 0;
           z-index: -1;
           //pointer-events: none;
-          transition: transform 1s cubic-bezier(0.66, 0, 0.34, 1), opacity 1s cubic-bezier(0.66, 0, 0.34, 1) !important;
+          transition: transform 1s cubic-bezier(0.66, 0, 0.34, 1), opacity 1s cubic-bezier(0.66, 0, 0.34, 1), z-index 1s cubic-bezier(0.66, 0, 0.34, 1) !important;
+          //transition: transform .6s ease, opacity .6s ease, z-index .6s ease !important;
         }
-        @include d(1440){
+        @include d(1441){
           max-width: 278px;
           height: 442px;
           border-radius: 15px;
@@ -224,7 +225,7 @@
           }
       }
     }
-    @include d(1440){
+    @include d(1441){
       max-width: 278px;
       height: 442px;
     }
@@ -245,7 +246,7 @@
     }
     .splide__pagination{
       margin: 50px auto 0;
-        @include d(1440){
+        @include d(1441){
           margin: 16px auto 0;
         }
         @include d(1200){
@@ -313,12 +314,15 @@
 @keyframes progress {
   0% {
     stroke-dashoffset: 527.788;
+    stroke: var(--color-blue);
   }
   92% {
     stroke-dashoffset: 0;
+    stroke: var(--color-blue);
   }
   100% {
     stroke-dashoffset: -527.788;
+    stroke: var(--color-green);
   }
 }
 

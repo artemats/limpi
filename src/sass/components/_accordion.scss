@@ -47,7 +47,7 @@
               width: 14px;
               height: 2px;
             }
-            @include d(1440){
+            @include d(1441){
               top: 6px;
             }
             @include d(600){
@@ -93,7 +93,7 @@
           transition: transform 0.4s ease;
         }
     }
-    @include d(1440){
+    @include d(1441){
       max-width: 630px;
     }
     @include d(1200){

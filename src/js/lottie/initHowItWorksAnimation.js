@@ -41,10 +41,16 @@ export const initHowItWorksAnimation = () => {
                 rendererSettings: {
                     progressiveLoad: true,
                     hideOnTransparent: true
+                },
+                onComplete: () => {
+                    console.log('stop - ', steps[i]);
                 }
             });
             cards[i].addEventListener('mouseenter', () => lot.play());
-            cards[i].addEventListener('mouseleave', () => lot.stop());
+            lot.addEventListener('complete', () => {
+               lot.stop();
+            });
+            // cards[i].addEventListener('mouseleave', () => lot.stop());
         }
     }
 };

@@ -13,6 +13,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      height: 100%;
         &-logo{
           display: flex;
           align-items: center;
@@ -115,6 +116,9 @@
               }
             }
         }
+        @include d(1441){
+          min-height: 50px;
+        }
         @include d(1200){
           min-height: 46px;
         }
@@ -146,11 +150,11 @@
         &.is-open-menu{
           .header-panel-nav{
             .link-bold{
-              top: 36px;
+              top: 48px;
             }
           }
         }
-        @include d(1440){
+        @include d(1441){
           top: 35px;
         }
         @include d(1200){
@@ -173,7 +177,7 @@
         @include d(1800){
           top: -90px;
         }
-        @include d(1440){
+        @include d(1441){
           top: -72px;
         }
         @include d(1200){
@@ -195,6 +199,12 @@
       }
       .logo-star{
         fill: var(--color-blue-100) !important;
+      }
+      @include d(1200){
+        padding-top: 28px;
+      }
+      @include d(600){
+        padding-top: 15px;
       }
     }
     &.__inner{
@@ -231,7 +241,7 @@
     @include d(1800){
       padding: 15px 0;
     }
-    @include d(1440){
+    @include d(1441){
       padding: 11px 0;
       left: 35px;
       right: 35px;
@@ -239,6 +249,7 @@
       width: calc(100% - 70px);
     }
     @include d(1200){
+      padding: 15px 0;
       top: 24px;
       left: 20px;
       right: 20px;

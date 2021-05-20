@@ -4,7 +4,7 @@
     &-title,
     &-subtitle{
       max-width: 530px;
-        @include d(1440){
+        @include d(1441){
           max-width: 440px;
         }
         @include d(1200){
@@ -21,7 +21,7 @@
           .illustration{
             bottom: -88px;
             left: 0;
-              @include d(1440){
+              @include d(1441){
                 width: 190px;
                 height: 214px;
                 bottom: -73px;

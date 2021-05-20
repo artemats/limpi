@@ -22,7 +22,7 @@
         @include d(1600){
           font-size: 18px;
         }
-        @include d(1440){
+        @include d(1441){
           font-size: 16px;
         }
         @include d(1400){
@@ -47,7 +47,7 @@
           font-size: 14px;
         }
     }
-    @include hover(991){
+    @include hover(1200){
       &:hover{
         opacity: .7;
       }
@@ -150,7 +150,7 @@
               background-color: var(--color-telegram-100);
             }
           }
-          @include hover(991){
+          @include hover(1200){
             &:hover{
               color: var(--color-white);
             }
@@ -164,7 +164,7 @@
               background-color: var(--color-whatsapp-100);
             }
           }
-          @include hover(991){
+          @include hover(1200){
             &:hover{
               color: var(--color-white);
             }
@@ -177,22 +177,27 @@
             background-color: var(--color-white);
           }
         }
-        &:hover{
-          color: var(--color-blue);
-            .link-btn-bg{
-              transform: scale3d(1.15,1.15,1);
-                &:before{
-                  transition: transform .4s cubic-bezier(0.1, 0, 0.3, 1);
-                  transform: translate3d(-50%,-50%,0) scale3d(1,1,1);
-                }
-                &:after{
-                  opacity: 1;
-                  transition-duration: 0.01s;
-                  transition-delay: 0.3s;
-                }
+        @include hover(1200) {
+          &:hover {
+            color: var(--color-blue);
+
+            .link-btn-bg {
+              transform: scale3d(1.15, 1.15, 1);
+
+              &:before {
+                transition: transform .4s cubic-bezier(0.1, 0, 0.3, 1);
+                transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+              }
+
+              &:after {
+                opacity: 1;
+                transition-duration: 0.01s;
+                transition-delay: 0.3s;
+              }
             }
+          }
         }
-        @include d(1440){
+        @include d(1441){
           height: 58px;
           line-height: 58px;
           padding: 0 30px;
@@ -219,7 +224,7 @@
         background-color: var(--color-blue);
       }
     }
-    @include hover(991){
+    @include hover(1200){
       &:hover{
         color: var(--color-blue);
       }
@@ -240,7 +245,7 @@
         background-color: var(--color-pink);
       }
     }
-    @include hover(991){
+    @include hover(1200){
       &:hover{
         color: var(--color-black);
       }
@@ -260,7 +265,7 @@
       background-color: var(--color-purple);
     }
   }
-  @include hover(991){
+  @include hover(1200){
     &:hover{
       color: var(--color-purple);
     }
