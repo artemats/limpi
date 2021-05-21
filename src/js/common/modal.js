@@ -15,18 +15,20 @@ export function openModal(modal) {
 }
 
 const closeModalBtns = document.querySelectorAll('.close');
-const modal = document.querySelector('.modal');
+const modals = document.querySelectorAll('.modal');
 const form = document.querySelector('.modal-form');
 const success = document.querySelector('.modal-success');
 for(let i = 0; i < closeModalBtns.length; i++) {
     closeModalBtns[i].addEventListener('click', function () {
-        gsap.to(modal, {
-            duration: 0.5,
-            opacity: 0,
-            onComplete: () => {
-                modal.style.display = 'none';
-                showForm();
-            }
-        });
+        for(let j = 0; j < modals.length; j++) {
+            gsap.to(modals[j], {
+                duration: 0.5,
+                opacity: 0,
+                onComplete: () => {
+                    modals[j].style.display = 'none';
+                    showForm();
+                }
+            });
+        }
     });
 }

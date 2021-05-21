@@ -123,5 +123,9 @@
           color: var(--color-blue);
         }
       }
+      @include d(1200){
+        opacity: 0;
+        transform: translateY(30px);
+      }
     }
 }

@@ -1,4 +1,4 @@
-import gsap, { Bounce } from 'gsap';
+import gsap, { Power2 } from 'gsap';
 
 const burger = document.querySelector('.burger');
 const header = document.querySelector('.header');
@@ -30,11 +30,11 @@ export function openMenu() {
                        opacity: 0,
                        y: 30
                    },{
-                       duration: 1,
+                       duration: 0.8,
                        opacity: 1,
                        y: 0,
-                       // stagger: 0.1,
-                       ease: Bounce.easeOut
+                       stagger: 0.05,
+                       ease: Power2.easeOut
                    });
                }
            });
@@ -49,8 +49,8 @@ export function closeMenu() {
     },{
         duration: 0.3,
         opacity: 0,
-        y: 30,
-        // stagger: 0.1,
+        // y: 30,
+        // stagger: 0.05,
         onComplete: () => {
             gsap.to(navWrap, {
                 duration: 0.1,
