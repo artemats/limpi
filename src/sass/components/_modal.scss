@@ -218,6 +218,9 @@
       .contacts-value{
         margin-top: 13px;
         font-size: 32px;
+          @include m(1201){
+            pointer-events: none;
+          }
           @include d(1441){
             font-size: 30px;
             margin-top: 11px;
