@@ -9,6 +9,9 @@
       position: absolute;
       opacity: 0;
       transform-origin: right top;
+      @media (max-width:1200px) {
+        display: none;
+      }
         &:before{
           content: '';
           position: absolute;
@@ -42,6 +45,7 @@
       height: 100px;
       border-radius: 50%;
       background-color: var(--color-white);
+   
         &-logo{
           position: absolute;
           top: 0;
@@ -55,6 +59,8 @@
           transition: opacity .4s ease;
             img{
               max-width: 70%;
+              position: relative;
+              top: 2px;
             }
         }
         .dots{
